@@ -67,6 +67,20 @@ export default function Home() {
           }}
         />
 
+        <div
+          style={{
+            backgroundColor: "#22c55e",
+            color: "#000",
+            padding: "14px 28px",
+            borderRadius: "999px",
+            fontWeight: "bold",
+            fontSize: "20px",
+            marginBottom: "35px",
+          }}
+        >
+          FREE 10-Minute Online Video Call
+        </div>
+
         <h1
           style={{
             fontSize: "78px",
@@ -184,6 +198,79 @@ export default function Home() {
         </div>
       </section>
 
+      {/* WHY CHOOSE MARC */}
+      <section
+        style={{
+          padding: "140px 20px",
+          backgroundColor: "#000",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "68px",
+            marginBottom: "35px",
+          }}
+        >
+          Why Train With Marc Harris?
+        </h2>
+
+        <p
+          style={{
+            textAlign: "center",
+            maxWidth: "1000px",
+            margin: "0 auto 80px auto",
+            fontSize: "24px",
+            lineHeight: "1.9",
+            color: "#d1d5db",
+          }}
+        >
+          Personalized coaching built around your individual
+          swing — not generic lessons copied from the internet.
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "30px",
+            maxWidth: "1400px",
+            margin: "0 auto",
+          }}
+        >
+          {[
+            "Personalized coaching",
+            "Direct video support",
+            "Beginner to elite coaching",
+            "Professional swing analysis",
+            "Simple explanations",
+            "Long-term improvement plans",
+          ].map((item, index) => (
+            <div
+              key={index}
+              style={{
+                backgroundColor: "#101010",
+                padding: "35px",
+                borderRadius: "24px",
+                textAlign: "center",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "22px",
+                  lineHeight: "1.8",
+                  color: "#d1d5db",
+                  fontWeight: "bold",
+                }}
+              >
+                {item}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* LEVELS */}
       <section
         style={{
@@ -225,183 +312,84 @@ export default function Home() {
             margin: "0 auto",
           }}
         >
-          <div
-            style={{
-              backgroundColor: "#101010",
-              padding: "40px",
-              borderRadius: "28px",
-            }}
-          >
-            <h3
-              style={{
-                fontSize: "36px",
-                color: "#22c55e",
-                marginBottom: "20px",
-              }}
-            >
-              Beginners
-            </h3>
-
-            <p
-              style={{
-                fontSize: "20px",
-                lineHeight: "1.8",
-                color: "#d1d5db",
-              }}
-            >
-              Grip, posture, setup, and building confidence from
-              day one.
-            </p>
-          </div>
-
-          <div
-            style={{
-              backgroundColor: "#101010",
-              padding: "40px",
-              borderRadius: "28px",
-            }}
-          >
-            <h3
-              style={{
-                fontSize: "36px",
-                color: "#22c55e",
-                marginBottom: "20px",
-              }}
-            >
-              Improving Golfers
-            </h3>
-
-            <p
-              style={{
-                fontSize: "20px",
-                lineHeight: "1.8",
-                color: "#d1d5db",
-              }}
-            >
-              Better consistency, sequencing, timing, and cleaner
-              ball striking.
-            </p>
-          </div>
-
-          <div
-            style={{
-              backgroundColor: "#101010",
-              padding: "40px",
-              borderRadius: "28px",
-            }}
-          >
-            <h3
-              style={{
-                fontSize: "36px",
-                color: "#22c55e",
-                marginBottom: "20px",
-              }}
-            >
-              Elite Players
-            </h3>
-
-            <p
-              style={{
-                fontSize: "20px",
-                lineHeight: "1.8",
-                color: "#d1d5db",
-              }}
-            >
-              Advanced swing mechanics, sequencing, body
-              movement, and elite-level performance coaching.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* PACKAGES */}
-      <section
-        style={{
-          padding: "150px 20px",
-          background:
-            "linear-gradient(180deg, #07130b 0%, #000000 100%)",
-        }}
-      >
-        <h2
-          style={{
-            textAlign: "center",
-            fontSize: "72px",
-            marginBottom: "80px",
-          }}
-        >
-          Coaching Packages
-        </h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "35px",
-            maxWidth: "1500px",
-            margin: "0 auto",
-          }}
-        >
           {[
             {
-              title: "Swing Analysis",
-              price: "$40",
-              text: "Detailed swing breakdown and feedback.",
+              title: "Beginners",
+              text: "Grip, posture, setup, and confidence from day one.",
             },
             {
-              title: "Single Session",
-              price: "$60",
-              text: "One-on-one live coaching session.",
+              title: "Improving Golfers",
+              text: "Better consistency, timing, and cleaner ball striking.",
             },
             {
-              title: "10 Lesson Package",
-              price: "$500",
-              text: "Long-term coaching and development.",
+              title: "Elite Players",
+              text: "Advanced mechanics, sequencing, and performance coaching.",
             },
-            {
-              title: "Monthly Coaching",
-              price: "$250",
-              text: "Monthly coaching with direct support.",
-            },
-          ].map((pkg, index) => (
+          ].map((level, index) => (
             <div
               key={index}
               style={{
                 backgroundColor: "#101010",
-                padding: "45px",
+                padding: "40px",
                 borderRadius: "28px",
-                textAlign: "center",
               }}
             >
               <h3
                 style={{
-                  fontSize: "38px",
+                  fontSize: "36px",
                   color: "#22c55e",
                   marginBottom: "20px",
                 }}
               >
-                {pkg.title}
+                {level.title}
               </h3>
 
               <p
                 style={{
-                  fontSize: "52px",
-                  fontWeight: "bold",
-                  marginBottom: "20px",
+                  fontSize: "20px",
+                  lineHeight: "1.8",
+                  color: "#d1d5db",
+                  marginBottom: "30px",
                 }}
               >
-                {pkg.price}
+                {level.text}
               </p>
 
-              <p
+              <div
                 style={{
-                  fontSize: "20px",
-                  color: "#d1d5db",
-                  lineHeight: "1.8",
+                  display: "flex",
+                  gap: "15px",
+                  flexWrap: "wrap",
                 }}
               >
-                {pkg.text}
-              </p>
+                <a
+                  href="https://wa.me/84776326949"
+                  style={{
+                    backgroundColor: "#22c55e",
+                    color: "#fff",
+                    padding: "14px 24px",
+                    borderRadius: "14px",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  }}
+                >
+                  WhatsApp
+                </a>
+
+                <a
+                  href="https://facebook.com/"
+                  style={{
+                    border: "2px solid #22c55e",
+                    color: "#fff",
+                    padding: "14px 24px",
+                    borderRadius: "14px",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Facebook
+                </a>
+              </div>
             </div>
           ))}
         </div>
@@ -411,7 +399,8 @@ export default function Home() {
       <section
         style={{
           padding: "150px 20px",
-          backgroundColor: "#050505",
+          background:
+            "linear-gradient(180deg, #07130b 0%, #000000 100%)",
         }}
       >
         <h2
@@ -456,7 +445,7 @@ export default function Home() {
       <section
         style={{
           padding: "150px 20px",
-          backgroundColor: "#000",
+          backgroundColor: "#050505",
         }}
       >
         <h2
@@ -506,6 +495,98 @@ export default function Home() {
                 }}
               >
                 {review.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* PACKAGES */}
+      <section
+        style={{
+          padding: "150px 20px",
+          backgroundColor: "#000",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "72px",
+            marginBottom: "80px",
+          }}
+        >
+          Coaching Packages
+        </h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: "35px",
+            maxWidth: "1500px",
+            margin: "0 auto",
+          }}
+        >
+          {[
+            {
+              title: "Swing Analysis",
+              price: "$60",
+              text: "Detailed online swing breakdown and feedback.",
+            },
+            {
+              title: "Single Online Lesson",
+              price: "$80",
+              text: "30-minute live online coaching session.",
+            },
+            {
+              title: "10 Session Package",
+              price: "$700",
+              text: "Long-term coaching and development plan.",
+            },
+            {
+              title: "Monthly Coaching",
+              price: "$500",
+              text: "Monthly support, video calls, and swing analysis.",
+            },
+          ].map((pkg, index) => (
+            <div
+              key={index}
+              style={{
+                backgroundColor: "#101010",
+                padding: "45px",
+                borderRadius: "28px",
+                textAlign: "center",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "38px",
+                  color: "#22c55e",
+                  marginBottom: "20px",
+                }}
+              >
+                {pkg.title}
+              </h3>
+
+              <p
+                style={{
+                  fontSize: "56px",
+                  fontWeight: "bold",
+                  marginBottom: "20px",
+                }}
+              >
+                {pkg.price}
+              </p>
+
+              <p
+                style={{
+                  fontSize: "20px",
+                  lineHeight: "1.8",
+                  color: "#d1d5db",
+                }}
+              >
+                {pkg.text}
               </p>
             </div>
           ))}
