@@ -68,19 +68,17 @@ export default function Home() {
             }}
           />
 
-          {/* LOGO */}
+          {/* WATERMARK LOGO */}
           <img
-            src="/mhlogo.png"
+            src="/99CBE530-CD5D-4ABD-82B4-B2FC14A56DAE.png"
             alt="MH Golf Logo"
             style={{
               position: "absolute",
-              bottom: "25px",
-              left: "50%",
-              transform: "translateX(-50%)",
-              width: "220px",
-              backgroundColor: "rgba(0,0,0,0.7)",
-              padding: "10px",
-              borderRadius: "20px",
+              top: "18px",
+              right: "18px",
+              width: "85px",
+              opacity: 0.55,
+              filter: "brightness(1.1)",
             }}
           />
         </div>
