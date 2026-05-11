@@ -75,11 +75,30 @@ export default function Home() {
             borderRadius: "999px",
             fontWeight: "bold",
             fontSize: "20px",
-            marginBottom: "35px",
+            marginBottom: "25px",
           }}
         >
           FREE 10-Minute Online Video Call
         </div>
+
+        <a
+          href="https://wa.me/84776326949"
+          style={{
+            padding: "22px 60px",
+            backgroundColor: "#22c55e",
+            color: "#fff",
+            borderRadius: "18px",
+            textDecoration: "none",
+            fontSize: "26px",
+            fontWeight: "bold",
+            boxShadow:
+              "0 15px 40px rgba(34,197,94,0.45)",
+            display: "inline-block",
+            marginBottom: "45px",
+          }}
+        >
+          Start
+        </a>
 
         <h1
           style={{
@@ -155,47 +174,6 @@ export default function Home() {
           Live video calls, swing analysis, direct feedback,
           lesson planning, and personal coaching online.
         </p>
-
-        <div
-          style={{
-            display: "flex",
-            gap: "25px",
-            flexWrap: "wrap",
-            justifyContent: "center",
-          }}
-        >
-          <a
-            href="https://wa.me/84776326949"
-            style={{
-              padding: "22px 50px",
-              backgroundColor: "#22c55e",
-              color: "#fff",
-              borderRadius: "18px",
-              textDecoration: "none",
-              fontSize: "24px",
-              fontWeight: "bold",
-              boxShadow:
-                "0 15px 40px rgba(34,197,94,0.45)",
-            }}
-          >
-            Start Lessons Today
-          </a>
-
-          <a
-            href="https://facebook.com/"
-            style={{
-              padding: "22px 50px",
-              border: "2px solid #22c55e",
-              color: "#fff",
-              borderRadius: "18px",
-              textDecoration: "none",
-              fontSize: "24px",
-              fontWeight: "bold",
-            }}
-          >
-            Visit Facebook
-          </a>
-        </div>
       </section>
 
       {/* WHY CHOOSE MARC */}
@@ -349,47 +327,10 @@ export default function Home() {
                   fontSize: "20px",
                   lineHeight: "1.8",
                   color: "#d1d5db",
-                  marginBottom: "30px",
                 }}
               >
                 {level.text}
               </p>
-
-              <div
-                style={{
-                  display: "flex",
-                  gap: "15px",
-                  flexWrap: "wrap",
-                }}
-              >
-                <a
-                  href="https://wa.me/84776326949"
-                  style={{
-                    backgroundColor: "#22c55e",
-                    color: "#fff",
-                    padding: "14px 24px",
-                    borderRadius: "14px",
-                    textDecoration: "none",
-                    fontWeight: "bold",
-                  }}
-                >
-                  WhatsApp
-                </a>
-
-                <a
-                  href="https://facebook.com/"
-                  style={{
-                    border: "2px solid #22c55e",
-                    color: "#fff",
-                    padding: "14px 24px",
-                    borderRadius: "14px",
-                    textDecoration: "none",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Facebook
-                </a>
-              </div>
             </div>
           ))}
         </div>
@@ -584,10 +525,75 @@ export default function Home() {
                   fontSize: "20px",
                   lineHeight: "1.8",
                   color: "#d1d5db",
+                  marginBottom: "30px",
                 }}
               >
                 {pkg.text}
               </p>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "14px",
+                }}
+              >
+                <a
+                  href="https://wa.me/84776326949"
+                  style={{
+                    backgroundColor: "#22c55e",
+                    color: "#fff",
+                    padding: "14px",
+                    borderRadius: "14px",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  }}
+                >
+                  WhatsApp
+                </a>
+
+                <a
+                  href="https://zalo.me/0816059110"
+                  style={{
+                    border: "2px solid #22c55e",
+                    color: "#fff",
+                    padding: "14px",
+                    borderRadius: "14px",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Zalo
+                </a>
+
+                <a
+                  href="https://facebook.com/"
+                  style={{
+                    border: "2px solid #22c55e",
+                    color: "#fff",
+                    padding: "14px",
+                    borderRadius: "14px",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Facebook
+                </a>
+
+                <a
+                  href="https://instagram.com/"
+                  style={{
+                    border: "2px solid #22c55e",
+                    color: "#fff",
+                    padding: "14px",
+                    borderRadius: "14px",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Instagram
+                </a>
+              </div>
             </div>
           ))}
         </div>
