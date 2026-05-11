@@ -6,27 +6,21 @@ export default function Home() {
     },
     {
       name: "Daniel K.",
-      text: "Professional, patient, and incredibly knowledgeable. Excellent coaching.",
+      text: "Professional, patient, and incredibly knowledgeable.",
     },
     {
       name: "Sarah L.",
       text: "Easy to understand and very effective coaching sessions.",
     },
-    {
-      name: "Michael T.",
-      text: "My ball striking improved massively after working with Marc.",
-    },
   ];
 
   const galleryImages = [
-    "/IMG_7364.png",
     "/IMG_7362.png",
     "/IMG_7359.png",
     "/IMG_7360.png",
     "/IMG_7358.png",
     "/IMG_7357.png",
     "/IMG_7361.png",
-    "/IMG_7356.png",
   ];
 
   return (
@@ -51,22 +45,47 @@ export default function Home() {
             "linear-gradient(180deg, #000000 0%, #07130b 100%)",
         }}
       >
-        <img
-          src="/IMG_7364.png"
-          alt="Marc Harris Golf"
+        {/* FIRST IMAGE */}
+        <div
           style={{
+            position: "relative",
             width: "520px",
             maxWidth: "95%",
-            height: "650px",
-            objectFit: "cover",
-            borderRadius: "28px",
-            border: "4px solid #22c55e",
             marginBottom: "50px",
-            boxShadow:
-              "0 25px 80px rgba(34,197,94,0.35)",
           }}
-        />
+        >
+          <img
+            src="/IMG_7364.png"
+            alt="Marc Harris Golf"
+            style={{
+              width: "100%",
+              height: "650px",
+              objectFit: "cover",
+              borderRadius: "28px",
+              border: "4px solid #22c55e",
+              boxShadow:
+                "0 25px 80px rgba(34,197,94,0.35)",
+            }}
+          />
 
+          {/* LOGO */}
+          <img
+            src="/mhlogo.png"
+            alt="MH Golf Logo"
+            style={{
+              position: "absolute",
+              bottom: "25px",
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: "220px",
+              backgroundColor: "rgba(0,0,0,0.7)",
+              padding: "10px",
+              borderRadius: "20px",
+            }}
+          />
+        </div>
+
+        {/* FREE CALL */}
         <div
           style={{
             backgroundColor: "#22c55e",
@@ -81,6 +100,7 @@ export default function Home() {
           FREE 10-Minute Online Video Call
         </div>
 
+        {/* START BUTTON */}
         <a
           href="https://wa.me/84776326949"
           style={{
@@ -107,7 +127,7 @@ export default function Home() {
             marginBottom: "20px",
           }}
         >
-          Marc Harris Golf
+          MH GOLF
         </h1>
 
         <h2
@@ -120,6 +140,7 @@ export default function Home() {
           Online Golf Coaching Worldwide
         </h2>
 
+        {/* FLAGS */}
         <div
           style={{
             display: "flex",
@@ -159,7 +180,7 @@ export default function Home() {
           }}
         >
           22+ years playing experience • Certified GSA Level 1
-          Coach • Coaching beginners to elite golfers.
+          Coach • Beginner to elite golfers.
         </p>
 
         <p
@@ -172,11 +193,11 @@ export default function Home() {
           }}
         >
           Live video calls, swing analysis, direct feedback,
-          lesson planning, and personal coaching online.
+          and personalized online coaching.
         </p>
       </section>
 
-      {/* WHY CHOOSE MARC */}
+      {/* WHY CHOOSE ME */}
       <section
         style={{
           padding: "140px 20px",
@@ -190,7 +211,7 @@ export default function Home() {
             marginBottom: "35px",
           }}
         >
-          Why Train With Marc Harris?
+          Why Train With Me?
         </h2>
 
         <p
@@ -203,8 +224,8 @@ export default function Home() {
             color: "#d1d5db",
           }}
         >
-          Personalized coaching built around your individual
-          swing — not generic lessons copied from the internet.
+          Personalized coaching built around YOUR swing —
+          not generic internet tips.
         </p>
 
         <div
@@ -219,11 +240,11 @@ export default function Home() {
         >
           {[
             "Personalized coaching",
-            "Direct video support",
-            "Beginner to elite coaching",
             "Professional swing analysis",
+            "Beginner to elite coaching",
             "Simple explanations",
-            "Long-term improvement plans",
+            "Direct video support",
+            "Long-term improvement",
           ].map((item, index) => (
             <div
               key={index}
@@ -266,20 +287,6 @@ export default function Home() {
           Coaching For Every Golfer
         </h2>
 
-        <p
-          style={{
-            textAlign: "center",
-            maxWidth: "900px",
-            margin: "0 auto 80px auto",
-            fontSize: "22px",
-            lineHeight: "1.8",
-            color: "#d1d5db",
-          }}
-        >
-          Simple online coaching through video calls and swing
-          analysis.
-        </p>
-
         <div
           style={{
             display: "grid",
@@ -287,21 +294,21 @@ export default function Home() {
               "repeat(auto-fit, minmax(320px, 1fr))",
             gap: "35px",
             maxWidth: "1500px",
-            margin: "0 auto",
+            margin: "80px auto 0 auto",
           }}
         >
           {[
             {
               title: "Beginners",
-              text: "Grip, posture, setup, and confidence from day one.",
+              text: "Grip, posture, setup, and confidence.",
             },
             {
               title: "Improving Golfers",
-              text: "Better consistency, timing, and cleaner ball striking.",
+              text: "Better consistency and cleaner strikes.",
             },
             {
               title: "Elite Players",
-              text: "Advanced mechanics, sequencing, and performance coaching.",
+              text: "Advanced mechanics and sequencing.",
             },
           ].map((level, index) => (
             <div
@@ -473,22 +480,18 @@ export default function Home() {
             {
               title: "Swing Analysis",
               price: "$60",
-              text: "Detailed online swing breakdown and feedback.",
             },
             {
               title: "Single Online Lesson",
               price: "$80",
-              text: "30-minute live online coaching session.",
             },
             {
               title: "10 Session Package",
               price: "$700",
-              text: "Long-term coaching and development plan.",
             },
             {
               title: "Monthly Coaching",
               price: "$500",
-              text: "Monthly support, video calls, and swing analysis.",
             },
           ].map((pkg, index) => (
             <div
@@ -514,21 +517,10 @@ export default function Home() {
                 style={{
                   fontSize: "56px",
                   fontWeight: "bold",
-                  marginBottom: "20px",
-                }}
-              >
-                {pkg.price}
-              </p>
-
-              <p
-                style={{
-                  fontSize: "20px",
-                  lineHeight: "1.8",
-                  color: "#d1d5db",
                   marginBottom: "30px",
                 }}
               >
-                {pkg.text}
+                {pkg.price}
               </p>
 
               <div
