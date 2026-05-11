@@ -92,7 +92,7 @@ export default function Home() {
             marginBottom: "30px",
           }}
         >
-          Elite Worldwide Online Golf Coaching
+          Golf Lessons For Complete Beginners To Elite Players
         </h2>
 
         <p
@@ -104,28 +104,26 @@ export default function Home() {
             marginBottom: "50px",
           }}
         >
-          Experience elite-level golf coaching designed to
-          transform your swing, sharpen your confidence, and
-          unlock your full golfing potential. With over 22 years
-          of golfing experience and professional coaching
-          expertise, Marc Harris helps players around the world
-          improve consistency, ball striking, and on-course
-          performance through premium online coaching.
+          Whether you are touching a golf club for the very first
+          time or already competing at a high level, Marc Harris
+          provides premium golf instruction designed around your
+          individual game, goals, and learning style.
         </p>
 
         <p
           style={{
-            maxWidth: "950px",
+            maxWidth: "1000px",
             fontSize: "22px",
             lineHeight: "2",
             color: "#9ca3af",
             marginBottom: "60px",
           }}
         >
-          Whether you are a beginner learning the fundamentals
-          or an experienced golfer looking for lower scores and
-          greater consistency, every lesson is personalized to
-          help you achieve real results.
+          Learn the fundamentals properly from the beginning,
+          improve your consistency, build confidence, understand
+          the golf swing deeply, and develop a more powerful and
+          efficient movement through elite-level coaching and
+          personalized analysis.
         </p>
 
         <div
@@ -150,7 +148,7 @@ export default function Home() {
                 "0 15px 40px rgba(34,197,94,0.45)",
             }}
           >
-            Start Coaching Today
+            Start Lessons Today
           </a>
 
           <a
@@ -167,6 +165,137 @@ export default function Home() {
           >
             Visit Facebook
           </a>
+        </div>
+      </section>
+
+      {/* LEVELS SECTION */}
+      <section
+        style={{
+          padding: "150px 20px",
+          backgroundColor: "#050505",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "72px",
+            marginBottom: "90px",
+          }}
+        >
+          Coaching For Every Skill Level
+        </h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: "35px",
+            maxWidth: "1500px",
+            margin: "0 auto",
+          }}
+        >
+          {/* BEGINNER */}
+          <div
+            style={{
+              backgroundColor: "#101010",
+              padding: "45px",
+              borderRadius: "28px",
+              boxShadow:
+                "0 20px 50px rgba(0,0,0,0.45)",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "38px",
+                color: "#22c55e",
+                marginBottom: "25px",
+              }}
+            >
+              Complete Beginners
+            </h3>
+
+            <p
+              style={{
+                fontSize: "21px",
+                lineHeight: "1.9",
+                color: "#d1d5db",
+              }}
+            >
+              Learn everything from the very beginning including
+              grip, posture, setup, stance, balance, alignment,
+              backswing fundamentals, downswing basics, and how
+              to strike the ball correctly with confidence.
+            </p>
+          </div>
+
+          {/* INTERMEDIATE */}
+          <div
+            style={{
+              backgroundColor: "#101010",
+              padding: "45px",
+              borderRadius: "28px",
+              boxShadow:
+                "0 20px 50px rgba(0,0,0,0.45)",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "38px",
+                color: "#22c55e",
+                marginBottom: "25px",
+              }}
+            >
+              Intermediate Golfers
+            </h3>
+
+            <p
+              style={{
+                fontSize: "21px",
+                lineHeight: "1.9",
+                color: "#d1d5db",
+              }}
+            >
+              Improve consistency, distance, ball striking,
+              sequencing, rotation, tempo, and control while
+              developing a more repeatable and efficient golf
+              swing under professional guidance.
+            </p>
+          </div>
+
+          {/* ELITE */}
+          <div
+            style={{
+              backgroundColor: "#101010",
+              padding: "45px",
+              borderRadius: "28px",
+              boxShadow:
+                "0 20px 50px rgba(0,0,0,0.45)",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "38px",
+                color: "#22c55e",
+                marginBottom: "25px",
+              }}
+            >
+              Elite Players
+            </h3>
+
+            <p
+              style={{
+                fontSize: "21px",
+                lineHeight: "1.9",
+                color: "#d1d5db",
+              }}
+            >
+              Advanced coaching covering swing mechanics, ground
+              forces, sequencing, transition, body movement,
+              muscle engagement, pressure shifts, timing, and
+              elite-level technical analysis for serious golfers.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -217,9 +346,10 @@ export default function Home() {
                 marginBottom: "25px",
               }}
             >
-              Marc Harris provides personalized online coaching
-              designed to build confidence, improve mechanics,
-              and create long-term golfing success.
+              With over 22 years of golfing experience and years
+              of coaching experience, Marc Harris delivers
+              premium online golf instruction to players around
+              the world.
             </p>
 
             <p
@@ -229,9 +359,9 @@ export default function Home() {
                 color: "#d1d5db",
               }}
             >
-              Every swing analysis and coaching session is built
-              around helping golfers achieve smoother swings,
-              better consistency, and lower scores.
+              Every lesson is tailored personally to help golfers
+              improve confidence, understand their swing better,
+              lower scores, and enjoy the game more.
             </p>
           </div>
         </div>
@@ -359,7 +489,7 @@ export default function Home() {
             marginBottom: "30px",
           }}
         >
-          Ready To Elevate Your Golf Game?
+          Ready To Improve Your Golf?
         </h2>
 
         <p
@@ -371,9 +501,10 @@ export default function Home() {
             color: "#d1d5db",
           }}
         >
-          Join golfers from around the world improving their
-          swing, confidence, consistency, and performance through
-          elite online golf coaching with Marc Harris.
+          Start your golfing journey today with personalized
+          online lessons designed for beginners, improving
+          players, and elite golfers looking to take their game
+          to the next level.
         </p>
 
         <div
@@ -398,11 +529,11 @@ export default function Home() {
                 "0 15px 45px rgba(34,197,94,0.45)",
             }}
           >
-            WhatsApp Marc Now
+            Book Your Lesson
           </a>
 
           <a
-            href="https://zalo.me/0816059110"
+            href="https://facebook.com/"
             style={{
               backgroundColor: "#111",
               color: "#fff",
@@ -414,7 +545,7 @@ export default function Home() {
               fontWeight: "bold",
             }}
           >
-            Message On Zalo
+            Visit Facebook
           </a>
         </div>
       </section>
