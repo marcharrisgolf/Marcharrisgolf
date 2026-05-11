@@ -2,27 +2,19 @@ export default function Home() {
   const reviews = [
     {
       name: "James R.",
-      text: "Marc completely transformed my golf swing. My consistency and confidence improved dramatically within weeks.",
+      text: "Marc completely transformed my golf swing. My consistency improved dramatically.",
     },
     {
       name: "Daniel K.",
-      text: "Professional, patient, and incredibly knowledgeable. The best online golf coaching I’ve experienced.",
+      text: "Professional, patient, and incredibly knowledgeable. Excellent coaching.",
     },
     {
       name: "Sarah L.",
-      text: "Marc explains the golf swing in a way that is simple and easy to understand. Highly recommended.",
+      text: "Easy to understand and very effective coaching sessions.",
     },
     {
       name: "Michael T.",
-      text: "The online coaching sessions were elite quality. My ball striking has improved massively.",
-    },
-    {
-      name: "Chris D.",
-      text: "Excellent communication, detailed swing analysis, and real results on the course.",
-    },
-    {
-      name: "Kevin P.",
-      text: "I lowered my scores and gained so much confidence after working with Marc.",
+      text: "My ball striking improved massively after working with Marc.",
     },
   ];
 
@@ -45,7 +37,7 @@ export default function Home() {
         fontFamily: "Arial, sans-serif",
       }}
     >
-      {/* HERO SECTION */}
+      {/* HERO */}
       <section
         style={{
           minHeight: "100vh",
@@ -87,43 +79,67 @@ export default function Home() {
 
         <h2
           style={{
-            fontSize: "36px",
+            fontSize: "34px",
             color: "#22c55e",
             marginBottom: "30px",
           }}
         >
-          Golf Lessons For Complete Beginners To Elite Players
+          Online Golf Coaching Worldwide
         </h2>
+
+        <div
+          style={{
+            display: "flex",
+            gap: "20px",
+            justifyContent: "center",
+            alignItems: "center",
+            marginBottom: "35px",
+            flexWrap: "wrap",
+          }}
+        >
+          <img
+            src="https://flagcdn.com/w320/gb.png"
+            alt="British Flag"
+            style={{
+              width: "90px",
+              borderRadius: "12px",
+            }}
+          />
+
+          <img
+            src="https://flagcdn.com/w320/za.png"
+            alt="South African Flag"
+            style={{
+              width: "90px",
+              borderRadius: "12px",
+            }}
+          />
+        </div>
 
         <p
           style={{
-            maxWidth: "1000px",
+            maxWidth: "900px",
             fontSize: "24px",
-            lineHeight: "2",
+            lineHeight: "1.8",
             color: "#d1d5db",
-            marginBottom: "50px",
+            marginBottom: "25px",
           }}
         >
-          Whether you are touching a golf club for the very first
-          time or already competing at a high level, Marc Harris
-          provides premium golf instruction designed around your
-          individual game, goals, and learning style.
+          22+ years playing experience • Certified GSA Level 1
+          Coach • Coaching beginners to elite golfers.
         </p>
 
         <p
           style={{
-            maxWidth: "1000px",
+            maxWidth: "900px",
             fontSize: "22px",
-            lineHeight: "2",
+            lineHeight: "1.8",
             color: "#9ca3af",
-            marginBottom: "60px",
+            marginBottom: "55px",
           }}
         >
-          Learn the fundamentals properly from the beginning,
-          improve your consistency, build confidence, understand
-          the golf swing deeply, and develop a more powerful and
-          efficient movement through elite-level coaching and
-          personalized analysis.
+          Live video calls, swing analysis, direct feedback,
+          lesson planning, and personal coaching online.
         </p>
 
         <div
@@ -168,21 +184,152 @@ export default function Home() {
         </div>
       </section>
 
-      {/* LEVELS SECTION */}
+      {/* LEVELS */}
       <section
         style={{
-          padding: "150px 20px",
+          padding: "140px 20px",
           backgroundColor: "#050505",
         }}
       >
         <h2
           style={{
             textAlign: "center",
-            fontSize: "72px",
-            marginBottom: "90px",
+            fontSize: "68px",
+            marginBottom: "35px",
           }}
         >
-          Coaching For Every Skill Level
+          Coaching For Every Golfer
+        </h2>
+
+        <p
+          style={{
+            textAlign: "center",
+            maxWidth: "900px",
+            margin: "0 auto 80px auto",
+            fontSize: "22px",
+            lineHeight: "1.8",
+            color: "#d1d5db",
+          }}
+        >
+          Simple online coaching through video calls and swing
+          analysis.
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: "35px",
+            maxWidth: "1500px",
+            margin: "0 auto",
+          }}
+        >
+          <div
+            style={{
+              backgroundColor: "#101010",
+              padding: "40px",
+              borderRadius: "28px",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "36px",
+                color: "#22c55e",
+                marginBottom: "20px",
+              }}
+            >
+              Beginners
+            </h3>
+
+            <p
+              style={{
+                fontSize: "20px",
+                lineHeight: "1.8",
+                color: "#d1d5db",
+              }}
+            >
+              Grip, posture, setup, and building confidence from
+              day one.
+            </p>
+          </div>
+
+          <div
+            style={{
+              backgroundColor: "#101010",
+              padding: "40px",
+              borderRadius: "28px",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "36px",
+                color: "#22c55e",
+                marginBottom: "20px",
+              }}
+            >
+              Improving Golfers
+            </h3>
+
+            <p
+              style={{
+                fontSize: "20px",
+                lineHeight: "1.8",
+                color: "#d1d5db",
+              }}
+            >
+              Better consistency, sequencing, timing, and cleaner
+              ball striking.
+            </p>
+          </div>
+
+          <div
+            style={{
+              backgroundColor: "#101010",
+              padding: "40px",
+              borderRadius: "28px",
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "36px",
+                color: "#22c55e",
+                marginBottom: "20px",
+              }}
+            >
+              Elite Players
+            </h3>
+
+            <p
+              style={{
+                fontSize: "20px",
+                lineHeight: "1.8",
+                color: "#d1d5db",
+              }}
+            >
+              Advanced swing mechanics, sequencing, body
+              movement, and elite-level performance coaching.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PACKAGES */}
+      <section
+        style={{
+          padding: "150px 20px",
+          background:
+            "linear-gradient(180deg, #07130b 0%, #000000 100%)",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "72px",
+            marginBottom: "80px",
+          }}
+        >
+          Coaching Packages
         </h2>
 
         <div
@@ -195,175 +342,68 @@ export default function Home() {
             margin: "0 auto",
           }}
         >
-          {/* BEGINNER */}
-          <div
-            style={{
-              backgroundColor: "#101010",
-              padding: "45px",
-              borderRadius: "28px",
-              boxShadow:
-                "0 20px 50px rgba(0,0,0,0.45)",
-            }}
-          >
-            <h3
+          {[
+            {
+              title: "Swing Analysis",
+              price: "$40",
+              text: "Detailed swing breakdown and feedback.",
+            },
+            {
+              title: "Single Session",
+              price: "$60",
+              text: "One-on-one live coaching session.",
+            },
+            {
+              title: "10 Lesson Package",
+              price: "$500",
+              text: "Long-term coaching and development.",
+            },
+            {
+              title: "Monthly Coaching",
+              price: "$250",
+              text: "Monthly coaching with direct support.",
+            },
+          ].map((pkg, index) => (
+            <div
+              key={index}
               style={{
-                fontSize: "38px",
-                color: "#22c55e",
-                marginBottom: "25px",
+                backgroundColor: "#101010",
+                padding: "45px",
+                borderRadius: "28px",
+                textAlign: "center",
               }}
             >
-              Complete Beginners
-            </h3>
+              <h3
+                style={{
+                  fontSize: "38px",
+                  color: "#22c55e",
+                  marginBottom: "20px",
+                }}
+              >
+                {pkg.title}
+              </h3>
 
-            <p
-              style={{
-                fontSize: "21px",
-                lineHeight: "1.9",
-                color: "#d1d5db",
-              }}
-            >
-              Learn everything from the very beginning including
-              grip, posture, setup, stance, balance, alignment,
-              backswing fundamentals, downswing basics, and how
-              to strike the ball correctly with confidence.
-            </p>
-          </div>
+              <p
+                style={{
+                  fontSize: "52px",
+                  fontWeight: "bold",
+                  marginBottom: "20px",
+                }}
+              >
+                {pkg.price}
+              </p>
 
-          {/* INTERMEDIATE */}
-          <div
-            style={{
-              backgroundColor: "#101010",
-              padding: "45px",
-              borderRadius: "28px",
-              boxShadow:
-                "0 20px 50px rgba(0,0,0,0.45)",
-            }}
-          >
-            <h3
-              style={{
-                fontSize: "38px",
-                color: "#22c55e",
-                marginBottom: "25px",
-              }}
-            >
-              Intermediate Golfers
-            </h3>
-
-            <p
-              style={{
-                fontSize: "21px",
-                lineHeight: "1.9",
-                color: "#d1d5db",
-              }}
-            >
-              Improve consistency, distance, ball striking,
-              sequencing, rotation, tempo, and control while
-              developing a more repeatable and efficient golf
-              swing under professional guidance.
-            </p>
-          </div>
-
-          {/* ELITE */}
-          <div
-            style={{
-              backgroundColor: "#101010",
-              padding: "45px",
-              borderRadius: "28px",
-              boxShadow:
-                "0 20px 50px rgba(0,0,0,0.45)",
-            }}
-          >
-            <h3
-              style={{
-                fontSize: "38px",
-                color: "#22c55e",
-                marginBottom: "25px",
-              }}
-            >
-              Elite Players
-            </h3>
-
-            <p
-              style={{
-                fontSize: "21px",
-                lineHeight: "1.9",
-                color: "#d1d5db",
-              }}
-            >
-              Advanced coaching covering swing mechanics, ground
-              forces, sequencing, transition, body movement,
-              muscle engagement, pressure shifts, timing, and
-              elite-level technical analysis for serious golfers.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT */}
-      <section
-        style={{
-          padding: "140px 20px",
-          backgroundColor: "#0a0a0a",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1400px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "70px",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src="/IMG_7362.png"
-            alt="Golf Coaching"
-            style={{
-              width: "100%",
-              borderRadius: "30px",
-              boxShadow:
-                "0 20px 60px rgba(0,0,0,0.5)",
-            }}
-          />
-
-          <div>
-            <h2
-              style={{
-                fontSize: "64px",
-                marginBottom: "35px",
-              }}
-            >
-              Professional Golf Coaching
-            </h2>
-
-            <p
-              style={{
-                fontSize: "24px",
-                lineHeight: "2",
-                color: "#d1d5db",
-                marginBottom: "25px",
-              }}
-            >
-              With over 22 years of golfing experience and years
-              of coaching experience, Marc Harris delivers
-              premium online golf instruction to players around
-              the world.
-            </p>
-
-            <p
-              style={{
-                fontSize: "24px",
-                lineHeight: "2",
-                color: "#d1d5db",
-              }}
-            >
-              Every lesson is tailored personally to help golfers
-              improve confidence, understand their swing better,
-              lower scores, and enjoy the game more.
-            </p>
-          </div>
+              <p
+                style={{
+                  fontSize: "20px",
+                  color: "#d1d5db",
+                  lineHeight: "1.8",
+                }}
+              >
+                {pkg.text}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -371,8 +411,7 @@ export default function Home() {
       <section
         style={{
           padding: "150px 20px",
-          background:
-            "linear-gradient(180deg, #07130b 0%, #000000 100%)",
+          backgroundColor: "#050505",
         }}
       >
         <h2
@@ -382,7 +421,7 @@ export default function Home() {
             marginBottom: "70px",
           }}
         >
-          Coaching Gallery
+          Coach In Action
         </h2>
 
         <div
@@ -417,7 +456,7 @@ export default function Home() {
       <section
         style={{
           padding: "150px 20px",
-          backgroundColor: "#050505",
+          backgroundColor: "#000",
         }}
       >
         <h2
@@ -447,8 +486,6 @@ export default function Home() {
                 backgroundColor: "#101010",
                 padding: "40px",
                 borderRadius: "28px",
-                boxShadow:
-                  "0 20px 50px rgba(0,0,0,0.45)",
               }}
             >
               <h3
@@ -472,81 +509,6 @@ export default function Home() {
               </p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* CONTACT */}
-      <section
-        style={{
-          padding: "170px 20px",
-          backgroundColor: "#000",
-          textAlign: "center",
-        }}
-      >
-        <h2
-          style={{
-            fontSize: "72px",
-            marginBottom: "30px",
-          }}
-        >
-          Ready To Improve Your Golf?
-        </h2>
-
-        <p
-          style={{
-            fontSize: "28px",
-            maxWidth: "900px",
-            margin: "0 auto 60px auto",
-            lineHeight: "2",
-            color: "#d1d5db",
-          }}
-        >
-          Start your golfing journey today with personalized
-          online lessons designed for beginners, improving
-          players, and elite golfers looking to take their game
-          to the next level.
-        </p>
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "25px",
-            flexWrap: "wrap",
-          }}
-        >
-          <a
-            href="https://wa.me/84776326949"
-            style={{
-              backgroundColor: "#22c55e",
-              color: "#fff",
-              padding: "24px 55px",
-              borderRadius: "20px",
-              textDecoration: "none",
-              fontSize: "26px",
-              fontWeight: "bold",
-              boxShadow:
-                "0 15px 45px rgba(34,197,94,0.45)",
-            }}
-          >
-            Book Your Lesson
-          </a>
-
-          <a
-            href="https://facebook.com/"
-            style={{
-              backgroundColor: "#111",
-              color: "#fff",
-              border: "2px solid #22c55e",
-              padding: "24px 55px",
-              borderRadius: "20px",
-              textDecoration: "none",
-              fontSize: "26px",
-              fontWeight: "bold",
-            }}
-          >
-            Visit Facebook
-          </a>
         </div>
       </section>
     </main>
