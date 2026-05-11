@@ -27,22 +27,22 @@ export default function Home() {
   ];
 
   const galleryImages = [
-    "/IMG_7355.png",
-    "/IMG_7356.png",
-    "/IMG_7357.png",
-    "/IMG_7358.png",
+    "/IMG_7364.png",
+    "/IMG_7362.png",
     "/IMG_7359.png",
     "/IMG_7360.png",
+    "/IMG_7358.png",
+    "/IMG_7357.png",
     "/IMG_7361.png",
-    "/IMG_7362.png",
+    "/IMG_7356.png",
   ];
 
   return (
     <main
       style={{
-        fontFamily: "'Helvetica Neue', Arial, sans-serif",
-        backgroundColor: "#000000",
-        color: "#ffffff",
+        backgroundColor: "#000",
+        color: "#fff",
+        fontFamily: "Arial, sans-serif",
       }}
     >
       {/* HERO SECTION */}
@@ -60,25 +60,26 @@ export default function Home() {
         }}
       >
         <img
-          src="/IMG_7357.png"
+          src="/IMG_7364.png"
           alt="Marc Harris Golf"
           style={{
-            width: "320px",
-            height: "320px",
+            width: "520px",
+            maxWidth: "95%",
+            height: "650px",
             objectFit: "cover",
-            borderRadius: "50%",
-            border: "7px solid #22c55e",
-            marginBottom: "40px",
-            boxShadow: "0 20px 60px rgba(34,197,94,0.45)",
+            borderRadius: "28px",
+            border: "4px solid #22c55e",
+            marginBottom: "50px",
+            boxShadow:
+              "0 25px 80px rgba(34,197,94,0.35)",
           }}
         />
 
         <h1
           style={{
-            fontSize: "88px",
+            fontSize: "78px",
             fontWeight: "900",
             marginBottom: "20px",
-            letterSpacing: "-3px",
           }}
         >
           Marc Harris Golf
@@ -86,10 +87,9 @@ export default function Home() {
 
         <h2
           style={{
-            fontSize: "38px",
+            fontSize: "36px",
             color: "#22c55e",
             marginBottom: "30px",
-            fontWeight: "700",
           }}
         >
           Elite Worldwide Online Golf Coaching
@@ -98,17 +98,34 @@ export default function Home() {
         <p
           style={{
             maxWidth: "1000px",
-            fontSize: "25px",
+            fontSize: "24px",
             lineHeight: "2",
             color: "#d1d5db",
             marginBottom: "50px",
           }}
         >
-          Unlock a more powerful, consistent, and confident golf
-          game through elite online coaching with Marc Harris.
-          Experience personalized swing analysis, professional
-          guidance, and premium golf development programs designed
-          to help golfers of every level reach their true potential.
+          Experience elite-level golf coaching designed to
+          transform your swing, sharpen your confidence, and
+          unlock your full golfing potential. With over 22 years
+          of golfing experience and professional coaching
+          expertise, Marc Harris helps players around the world
+          improve consistency, ball striking, and on-course
+          performance through premium online coaching.
+        </p>
+
+        <p
+          style={{
+            maxWidth: "950px",
+            fontSize: "22px",
+            lineHeight: "2",
+            color: "#9ca3af",
+            marginBottom: "60px",
+          }}
+        >
+          Whether you are a beginner learning the fundamentals
+          or an experienced golfer looking for lower scores and
+          greater consistency, every lesson is personalized to
+          help you achieve real results.
         </p>
 
         <div
@@ -124,7 +141,7 @@ export default function Home() {
             style={{
               padding: "22px 50px",
               backgroundColor: "#22c55e",
-              color: "#ffffff",
+              color: "#fff",
               borderRadius: "18px",
               textDecoration: "none",
               fontSize: "24px",
@@ -140,21 +157,20 @@ export default function Home() {
             href="https://facebook.com/"
             style={{
               padding: "22px 50px",
-              backgroundColor: "#111111",
               border: "2px solid #22c55e",
-              color: "#ffffff",
+              color: "#fff",
               borderRadius: "18px",
               textDecoration: "none",
               fontSize: "24px",
               fontWeight: "bold",
             }}
           >
-            View Facebook Profile
+            Visit Facebook
           </a>
         </div>
       </section>
 
-      {/* ABOUT SECTION */}
+      {/* ABOUT */}
       <section
         style={{
           padding: "140px 20px",
@@ -168,28 +184,29 @@ export default function Home() {
             display: "grid",
             gridTemplateColumns:
               "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "80px",
+            gap: "70px",
             alignItems: "center",
           }}
         >
           <img
-            src="/IMG_7360.png"
+            src="/IMG_7362.png"
             alt="Golf Coaching"
             style={{
               width: "100%",
-              borderRadius: "35px",
-              boxShadow: "0 25px 60px rgba(0,0,0,0.55)",
+              borderRadius: "30px",
+              boxShadow:
+                "0 20px 60px rgba(0,0,0,0.5)",
             }}
           />
 
           <div>
             <h2
               style={{
-                fontSize: "68px",
+                fontSize: "64px",
                 marginBottom: "35px",
               }}
             >
-              Train With Marc Harris
+              Professional Golf Coaching
             </h2>
 
             <p
@@ -200,10 +217,9 @@ export default function Home() {
                 marginBottom: "25px",
               }}
             >
-              With over 22 years of golfing experience and years
-              of professional coaching knowledge, Marc Harris
-              provides elite online golf coaching designed to help
-              players improve every aspect of their game.
+              Marc Harris provides personalized online coaching
+              designed to build confidence, improve mechanics,
+              and create long-term golfing success.
             </p>
 
             <p
@@ -213,10 +229,9 @@ export default function Home() {
                 color: "#d1d5db",
               }}
             >
-              Through personalized swing analysis, clear technical
-              instruction, and confidence-building coaching,
-              golfers worldwide are developing stronger swings,
-              lower scores, and greater consistency on the course.
+              Every swing analysis and coaching session is built
+              around helping golfers achieve smoother swings,
+              better consistency, and lower scores.
             </p>
           </div>
         </div>
@@ -254,13 +269,14 @@ export default function Home() {
             <img
               key={index}
               src={img}
-              alt="Golf Coaching"
+              alt="Golf"
               style={{
                 width: "100%",
                 height: "430px",
                 objectFit: "cover",
-                borderRadius: "30px",
-                boxShadow: "0 25px 60px rgba(0,0,0,0.5)",
+                borderRadius: "25px",
+                boxShadow:
+                  "0 20px 50px rgba(0,0,0,0.5)",
               }}
             />
           ))}
@@ -329,35 +345,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT SECTION */}
+      {/* CONTACT */}
       <section
         style={{
           padding: "170px 20px",
-          backgroundColor: "#000000",
+          backgroundColor: "#000",
           textAlign: "center",
         }}
       >
         <h2
           style={{
-            fontSize: "76px",
-            marginBottom: "35px",
+            fontSize: "72px",
+            marginBottom: "30px",
           }}
         >
-          Ready To Transform Your Golf Game?
+          Ready To Elevate Your Golf Game?
         </h2>
 
         <p
           style={{
             fontSize: "28px",
-            maxWidth: "950px",
+            maxWidth: "900px",
             margin: "0 auto 60px auto",
             lineHeight: "2",
             color: "#d1d5db",
           }}
         >
-          Join golfers around the world improving their swing,
-          confidence, and on-course performance through elite
-          online coaching with Marc Harris.
+          Join golfers from around the world improving their
+          swing, confidence, consistency, and performance through
+          elite online golf coaching with Marc Harris.
         </p>
 
         <div
@@ -372,7 +388,7 @@ export default function Home() {
             href="https://wa.me/84776326949"
             style={{
               backgroundColor: "#22c55e",
-              color: "#ffffff",
+              color: "#fff",
               padding: "24px 55px",
               borderRadius: "20px",
               textDecoration: "none",
@@ -388,8 +404,8 @@ export default function Home() {
           <a
             href="https://zalo.me/0816059110"
             style={{
-              backgroundColor: "#111111",
-              color: "#ffffff",
+              backgroundColor: "#111",
+              color: "#fff",
               border: "2px solid #22c55e",
               padding: "24px 55px",
               borderRadius: "20px",
