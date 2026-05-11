@@ -67,21 +67,6 @@ export default function Home() {
                 "0 25px 80px rgba(34,197,94,0.35)",
             }}
           />
-
-          {/* WATERMARK LOGO */}
-          <img
-            src="/99CBE530-CD5D-4ABD-82B4-B2FC14A56DAE.png"
-            alt="MH Golf Watermark"
-            style={{
-              position: "absolute",
-              top: "18px",
-              right: "18px",
-              width: "90px",
-              opacity: 0.35,
-              zIndex: 10,
-              pointerEvents: "none",
-            }}
-          />
         </div>
 
         {/* FREE CALL */}
@@ -324,6 +309,52 @@ export default function Home() {
                 {level.text}
               </p>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section
+        style={{
+          padding: "150px 20px",
+          background:
+            "linear-gradient(180deg, #07130b 0%, #000000 100%)",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "72px",
+            marginBottom: "70px",
+          }}
+        >
+          Coach In Action
+        </h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "35px",
+            maxWidth: "1500px",
+            margin: "0 auto",
+          }}
+        >
+          {galleryImages.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt="Golf"
+              style={{
+                width: "100%",
+                height: "430px",
+                objectFit: "cover",
+                borderRadius: "25px",
+                boxShadow:
+                  "0 20px 50px rgba(0,0,0,0.5)",
+              }}
+            />
           ))}
         </div>
       </section>
