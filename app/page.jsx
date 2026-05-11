@@ -45,7 +45,7 @@ export default function Home() {
             "linear-gradient(180deg, #000000 0%, #07130b 100%)",
         }}
       >
-        {/* FIRST IMAGE */}
+        {/* MAIN IMAGE */}
         <div
           style={{
             position: "relative",
@@ -71,14 +71,15 @@ export default function Home() {
           {/* WATERMARK LOGO */}
           <img
             src="/99CBE530-CD5D-4ABD-82B4-B2FC14A56DAE.png"
-            alt="MH Golf Logo"
+            alt="MH Golf Watermark"
             style={{
               position: "absolute",
               top: "18px",
               right: "18px",
-              width: "85px",
-              opacity: 0.55,
-              filter: "brightness(1.1)",
+              width: "90px",
+              opacity: 0.35,
+              zIndex: 10,
+              pointerEvents: "none",
             }}
           />
         </div>
@@ -195,7 +196,7 @@ export default function Home() {
         </p>
       </section>
 
-      {/* WHY CHOOSE ME */}
+      {/* WHY TRAIN WITH ME */}
       <section
         style={{
           padding: "140px 20px",
@@ -212,20 +213,6 @@ export default function Home() {
           Why Train With Me?
         </h2>
 
-        <p
-          style={{
-            textAlign: "center",
-            maxWidth: "1000px",
-            margin: "0 auto 80px auto",
-            fontSize: "24px",
-            lineHeight: "1.9",
-            color: "#d1d5db",
-          }}
-        >
-          Personalized coaching built around YOUR swing —
-          not generic internet tips.
-        </p>
-
         <div
           style={{
             display: "grid",
@@ -233,7 +220,7 @@ export default function Home() {
               "repeat(auto-fit, minmax(280px, 1fr))",
             gap: "30px",
             maxWidth: "1400px",
-            margin: "0 auto",
+            margin: "80px auto 0 auto",
           }}
         >
           {[
@@ -336,254 +323,6 @@ export default function Home() {
               >
                 {level.text}
               </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* GALLERY */}
-      <section
-        style={{
-          padding: "150px 20px",
-          background:
-            "linear-gradient(180deg, #07130b 0%, #000000 100%)",
-        }}
-      >
-        <h2
-          style={{
-            textAlign: "center",
-            fontSize: "72px",
-            marginBottom: "70px",
-          }}
-        >
-          Coach In Action
-        </h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: "35px",
-            maxWidth: "1500px",
-            margin: "0 auto",
-          }}
-        >
-          {galleryImages.map((img, index) => (
-            <img
-              key={index}
-              src={img}
-              alt="Golf"
-              style={{
-                width: "100%",
-                height: "430px",
-                objectFit: "cover",
-                borderRadius: "25px",
-                boxShadow:
-                  "0 20px 50px rgba(0,0,0,0.5)",
-              }}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* REVIEWS */}
-      <section
-        style={{
-          padding: "150px 20px",
-          backgroundColor: "#050505",
-        }}
-      >
-        <h2
-          style={{
-            textAlign: "center",
-            fontSize: "72px",
-            marginBottom: "80px",
-          }}
-        >
-          Client Reviews
-        </h2>
-
-        <div
-          style={{
-            maxWidth: "1400px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "35px",
-          }}
-        >
-          {reviews.map((review, index) => (
-            <div
-              key={index}
-              style={{
-                backgroundColor: "#101010",
-                padding: "40px",
-                borderRadius: "28px",
-              }}
-            >
-              <h3
-                style={{
-                  fontSize: "28px",
-                  marginBottom: "20px",
-                  color: "#22c55e",
-                }}
-              >
-                {review.name}
-              </h3>
-
-              <p
-                style={{
-                  fontSize: "21px",
-                  lineHeight: "1.9",
-                  color: "#d1d5db",
-                }}
-              >
-                {review.text}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* PACKAGES */}
-      <section
-        style={{
-          padding: "150px 20px",
-          backgroundColor: "#000",
-        }}
-      >
-        <h2
-          style={{
-            textAlign: "center",
-            fontSize: "72px",
-            marginBottom: "80px",
-          }}
-        >
-          Coaching Packages
-        </h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: "35px",
-            maxWidth: "1500px",
-            margin: "0 auto",
-          }}
-        >
-          {[
-            {
-              title: "Swing Analysis",
-              price: "$60",
-            },
-            {
-              title: "Single Online Lesson",
-              price: "$80",
-            },
-            {
-              title: "10 Session Package",
-              price: "$700",
-            },
-            {
-              title: "Monthly Coaching",
-              price: "$500",
-            },
-          ].map((pkg, index) => (
-            <div
-              key={index}
-              style={{
-                backgroundColor: "#101010",
-                padding: "45px",
-                borderRadius: "28px",
-                textAlign: "center",
-              }}
-            >
-              <h3
-                style={{
-                  fontSize: "38px",
-                  color: "#22c55e",
-                  marginBottom: "20px",
-                }}
-              >
-                {pkg.title}
-              </h3>
-
-              <p
-                style={{
-                  fontSize: "56px",
-                  fontWeight: "bold",
-                  marginBottom: "30px",
-                }}
-              >
-                {pkg.price}
-              </p>
-
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "14px",
-                }}
-              >
-                <a
-                  href="https://wa.me/84776326949"
-                  style={{
-                    backgroundColor: "#22c55e",
-                    color: "#fff",
-                    padding: "14px",
-                    borderRadius: "14px",
-                    textDecoration: "none",
-                    fontWeight: "bold",
-                  }}
-                >
-                  WhatsApp
-                </a>
-
-                <a
-                  href="https://zalo.me/0816059110"
-                  style={{
-                    border: "2px solid #22c55e",
-                    color: "#fff",
-                    padding: "14px",
-                    borderRadius: "14px",
-                    textDecoration: "none",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Zalo
-                </a>
-
-                <a
-                  href="https://facebook.com/"
-                  style={{
-                    border: "2px solid #22c55e",
-                    color: "#fff",
-                    padding: "14px",
-                    borderRadius: "14px",
-                    textDecoration: "none",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Facebook
-                </a>
-
-                <a
-                  href="https://instagram.com/"
-                  style={{
-                    border: "2px solid #22c55e",
-                    color: "#fff",
-                    padding: "14px",
-                    borderRadius: "14px",
-                    textDecoration: "none",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Instagram
-                </a>
-              </div>
             </div>
           ))}
         </div>
