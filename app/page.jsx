@@ -3,8 +3,8 @@ export default function Home() {
     <main
       style={{
         fontFamily: 'Arial, sans-serif',
-        backgroundColor: '#f5f5f5',
-        color: '#111',
+        backgroundColor: '#000',
+        color: 'white',
       }}
     >
       {/* HERO SECTION */}
@@ -16,22 +16,22 @@ export default function Home() {
           justifyContent: 'center',
           alignItems: 'center',
           textAlign: 'center',
-          padding: '60px 20px',
+          padding: '40px 20px',
           background:
-            'linear-gradient(180deg, #ffffff 0%, #e9f9ef 100%)',
+            'linear-gradient(to bottom, #000000, #07130b)',
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?q=80&w=1200&auto=format&fit=crop"
-          alt="Golf Coaching"
+          src="/hero.jpg"
+          alt="Marc Harris Golf"
           style={{
-            width: '220px',
-            height: '220px',
+            width: '280px',
+            height: '280px',
             objectFit: 'cover',
             borderRadius: '50%',
             border: '6px solid #22c55e',
             marginBottom: '40px',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.5)',
           }}
         />
 
@@ -40,7 +40,6 @@ export default function Home() {
             fontSize: '72px',
             marginBottom: '20px',
             fontWeight: '900',
-            letterSpacing: '-2px',
           }}
         >
           Marc Harris Golf
@@ -48,94 +47,54 @@ export default function Home() {
 
         <h2
           style={{
-            fontSize: '36px',
+            fontSize: '34px',
             color: '#22c55e',
-            marginBottom: '35px',
-            maxWidth: '900px',
+            marginBottom: '30px',
           }}
         >
-          Elite Worldwide Online Golf Coaching
+          Worldwide Online Golf Coaching
         </h2>
 
         <p
           style={{
             maxWidth: '900px',
-            fontSize: '24px',
-            lineHeight: '1.9',
-            marginBottom: '50px',
-            color: '#333',
+            fontSize: '22px',
+            lineHeight: '1.8',
+            color: '#d1d5db',
           }}
         >
-          Professional golf coaching designed to improve your swing,
-          consistency, confidence, and on-course performance.
-          Personalized coaching programs available worldwide.
+          Professional online golf coaching, swing analysis,
+          elite development programs, and worldwide coaching
+          support from certified golf coach Marc Harris.
         </p>
-
-        <div
-          style={{
-            display: 'flex',
-            gap: '20px',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-          }}
-        >
-          <button
-            style={{
-              padding: '18px 42px',
-              backgroundColor: '#22c55e',
-              color: 'white',
-              border: 'none',
-              borderRadius: '14px',
-              fontSize: '20px',
-              fontWeight: 'bold',
-              cursor: 'pointer',
-              boxShadow: '0 10px 25px rgba(34,197,94,0.35)',
-            }}
-          >
-            Start Coaching
-          </button>
-
-          <button
-            style={{
-              padding: '18px 42px',
-              backgroundColor: 'white',
-              color: '#111',
-              border: '2px solid #111',
-              borderRadius: '14px',
-              fontSize: '20px',
-              fontWeight: 'bold',
-              cursor: 'pointer',
-            }}
-          >
-            View Packages
-          </button>
-        </div>
       </section>
 
-      {/* ABOUT */}
+      {/* ABOUT SECTION */}
       <section
         style={{
           padding: '120px 20px',
-          backgroundColor: 'white',
+          backgroundColor: '#0f0f0f',
         }}
       >
         <div
           style={{
+            display: 'grid',
+            gridTemplateColumns:
+              'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: '50px',
+            alignItems: 'center',
             maxWidth: '1200px',
             margin: '0 auto',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '60px',
-            alignItems: 'center',
           }}
         >
           <img
-            src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?q=80&w=1200&auto=format&fit=crop"
-            alt="Golf"
+            src="/coach.jpg"
+            alt="Golf Coach"
             style={{
               width: '100%',
               borderRadius: '30px',
-              boxShadow: '0 20px 40px rgba(0,0,0,0.15)',
+              boxShadow:
+                '0 20px 40px rgba(0,0,0,0.5)',
             }}
           />
 
@@ -153,99 +112,65 @@ export default function Home() {
               style={{
                 fontSize: '22px',
                 lineHeight: '1.9',
-                color: '#333',
+                color: '#d1d5db',
               }}
             >
-              Marc Harris is a certified golf coach with over 22 years
-              of golfing experience. His coaching combines technical
-              instruction, swing analysis, confidence development,
-              and real on-course improvement strategies.
+              Marc Harris has over 22 years of golf experience
+              and provides elite online coaching worldwide.
+              His coaching focuses on improving consistency,
+              swing mechanics, confidence, and overall golf
+              performance.
             </p>
           </div>
         </div>
       </section>
 
-      {/* PACKAGES */}
+      {/* GALLERY */}
       <section
         style={{
           padding: '120px 20px',
-          backgroundColor: '#f0fdf4',
+          backgroundColor: '#07130b',
         }}
       >
         <h2
           style={{
             textAlign: 'center',
             fontSize: '58px',
-            marginBottom: '70px',
+            marginBottom: '60px',
           }}
         >
-          Coaching Packages
+          Coaching Gallery
         </h2>
 
         <div
           style={{
+            display: 'grid',
+            gridTemplateColumns:
+              'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '30px',
             maxWidth: '1300px',
             margin: '0 auto',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '35px',
           }}
         >
           {[
-            {
-              title: 'Starter',
-              price: '$49',
-              items: ['1 Swing Analysis', 'Video Feedback', 'Practice Drills'],
-            },
-            {
-              title: 'Professional',
-              price: '$149',
-              items: ['4 Coaching Sessions', 'Personal Training Plan', 'Priority Support'],
-            },
-            {
-              title: 'Elite Coaching',
-              price: '$399',
-              items: ['Monthly Coaching', 'Unlimited Reviews', 'Elite Development'],
-            },
-          ].map((pkg, index) => (
-            <div
+            '/student.jpg',
+            '/swing.jpg',
+            '/range.jpg',
+            '/putting.jpg',
+          ].map((img, index) => (
+            <img
               key={index}
+              src={img}
+              alt="Golf"
               style={{
-                backgroundColor: 'white',
-                borderRadius: '28px',
-                padding: '50px 40px',
-                textAlign: 'center',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.08)',
+                width: '100%',
+                height: '380px',
+                objectFit: 'cover',
+                borderRadius: '24px',
+                boxShadow:
+                  '0 20px 40px rgba(0,0,0,0.4)',
               }}
-            >
-              <h3 style={{ fontSize: '38px', marginBottom: '20px' }}>
-                {pkg.title}
-              </h3>
-
-              <p
-                style={{
-                  fontSize: '32px',
-                  color: '#22c55e',
-                  fontWeight: 'bold',
-                  marginBottom: '30px',
-                }}
-              >
-                {pkg.price}
-              </p>
-
-              {pkg.items.map((item, i) => (
-                <p
-                  key={i}
-                  style={{
-                    fontSize: '20px',
-                    marginBottom: '15px',
-                    color: '#444',
-                  }}
-                >
-                  {item}
-                </p>
-              ))}
-            </div>
+            />
           ))}
         </div>
       </section>
@@ -254,9 +179,8 @@ export default function Home() {
       <section
         style={{
           padding: '120px 20px',
-          backgroundColor: '#111',
-          color: 'white',
           textAlign: 'center',
+          backgroundColor: '#000',
         }}
       >
         <h2
@@ -268,18 +192,14 @@ export default function Home() {
           Contact Marc Harris
         </h2>
 
-        <p style={{ fontSize: '24px', marginBottom: '18px' }}>
+        <p style={{ fontSize: '24px' }}>
           WhatsApp: 0776326949
         </p>
 
-        <p style={{ fontSize: '24px', marginBottom: '18px' }}>
+        <p style={{ fontSize: '24px' }}>
           Zalo: 0816059110
-        </p>
-
-        <p style={{ fontSize: '24px', color: '#22c55e' }}>
-          International Online Coaching Available
         </p>
       </section>
     </main>
-  )
+  );
 }
