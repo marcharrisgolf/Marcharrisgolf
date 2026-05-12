@@ -54,7 +54,7 @@ export default function Home() {
         {/* TOP PAGE HEADING */}
         <h1
           style={{
-            fontSize: "84px",
+            fontSize: "58px",
             fontWeight: "900",
             marginBottom: "45px",
             textTransform: "uppercase",
@@ -587,7 +587,9 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="https://instagram.com/"
+                  href="https://instagram.com/_world_wonderer_"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     border: "2px solid #22c55e",
                     color: "#fff",
