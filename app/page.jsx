@@ -482,12 +482,12 @@ export default function Home() {
             },
             {
               title: "10 Session Package",
-              price: "$700",
+              price: "$550",
               text: "Long-term coaching and development plan.",
             },
             {
               title: "Monthly Coaching",
-              price: "$500",
+              price: "$700",
               text: "Monthly support, video calls, and swing analysis.",
             },
           ].map((pkg, index) => (
