@@ -1,361 +1,603 @@
 export default function Home() {
+  const reviews = [
+    {
+      name: "James R.",
+      text: "Marc completely transformed my golf swing. My consistency improved dramatically.",
+    },
+    {
+      name: "Daniel K.",
+      text: "Professional, patient, and incredibly knowledgeable. Excellent coaching.",
+    },
+    {
+      name: "Sarah L.",
+      text: "Easy to understand and very effective coaching sessions.",
+    },
+    {
+      name: "Michael T.",
+      text: "My ball striking improved massively after working with Marc.",
+    },
+  ];
+
+  const galleryImages = [
+    "/IMG_7364.png",
+    "/IMG_7362.png",
+    "/IMG_7359.png",
+    "/IMG_7360.png",
+    "/IMG_7358.png",
+    "/IMG_7357.png",
+    "/IMG_7361.png",
+    "/IMG_7356.png",
+  ];
+
   return (
     <main
       style={{
         backgroundColor: "#000",
-        color: "white",
-        minHeight: "100vh",
+        color: "#fff",
         fontFamily: "Arial, sans-serif",
       }}
     >
-
-      {/* HERO SECTION */}
+      {/* HERO */}
       <section
         style={{
-          position: "relative",
           minHeight: "100vh",
           display: "flex",
-          alignItems: "center",
+          flexDirection: "column",
           justifyContent: "center",
-          overflow: "hidden",
+          alignItems: "center",
+          textAlign: "center",
+          padding: "80px 20px",
+          background:
+            "linear-gradient(180deg, #000000 0%, #07130b 100%)",
         }}
       >
-
-        {/* Background Image */}
         <img
-          src="/golf-hero.jpg"
-          alt="Golf Hero"
+          src="/IMG_7364.png"
+          alt="Marc Harris Golf"
           style={{
-            position: "absolute",
-            width: "100%",
-            height: "100%",
+            width: "520px",
+            maxWidth: "95%",
+            height: "650px",
             objectFit: "cover",
-            opacity: 0.45,
+            borderRadius: "28px",
+            border: "4px solid #22c55e",
+            marginBottom: "50px",
+            boxShadow:
+              "0 25px 80px rgba(34,197,94,0.35)",
           }}
         />
 
-        {/* Dark Overlay */}
         <div
           style={{
-            position: "absolute",
-            inset: 0,
-            backgroundColor: "rgba(0,0,0,0.55)",
-          }}
-        ></div>
-
-        {/* Logo */}
-        <img
-          src="/mh-logo.png"
-          alt="MH Golf"
-          style={{
-            position: "absolute",
-            top: 20,
-            left: 20,
-            width: 90,
-            zIndex: 10,
-          }}
-        />
-
-        {/* Hero Text */}
-        <div
-          style={{
-            position: "relative",
-            zIndex: 5,
-            maxWidth: "700px",
-            padding: "20px",
+            backgroundColor: "#22c55e",
+            color: "#000",
+            padding: "14px 28px",
+            borderRadius: "999px",
+            fontWeight: "bold",
+            fontSize: "20px",
+            marginBottom: "25px",
           }}
         >
-
-          <h1
-            style={{
-              fontSize: "64px",
-              fontWeight: "bold",
-              lineHeight: "1.1",
-              marginBottom: "25px",
-            }}
-          >
-            Elevate Your <br />
-            <span style={{ color: "#d4af37" }}>
-              Golf Journey
-            </span>
-          </h1>
-
-          <p
-            style={{
-              fontSize: "24px",
-              lineHeight: "1.7",
-              color: "#ddd",
-              marginBottom: "40px",
-            }}
-          >
-            Premium online golf coaching with Marc Harris.
-            Improve your swing, confidence, consistency,
-            ball striking, and overall understanding of the game
-            through personalised international coaching.
-          </p>
-
-          <a
-            href="https://wa.me/84776326949"
-            style={{
-              display: "inline-block",
-              backgroundColor: "#d4af37",
-              color: "black",
-              padding: "18px 34px",
-              borderRadius: "14px",
-              fontWeight: "bold",
-              textDecoration: "none",
-              fontSize: "18px",
-            }}
-          >
-            Contact Marc On WhatsApp
-          </a>
-
+          FREE 10-Minute Online Video Call
         </div>
-      </section>
 
-      {/* WHY TRAIN WITH MARC */}
-      <section
-        style={{
-          padding: "100px 20px",
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
-
-        <h2
+        <a
+          href="https://wa.me/84776326949"
           style={{
-            fontSize: "60px",
-            textAlign: "center",
+            padding: "22px 60px",
+            backgroundColor: "#22c55e",
+            color: "#fff",
+            borderRadius: "18px",
+            textDecoration: "none",
+            fontSize: "26px",
+            fontWeight: "bold",
+            boxShadow:
+              "0 15px 40px rgba(34,197,94,0.45)",
+            display: "inline-block",
+            marginBottom: "45px",
+          }}
+        >
+          Start
+        </a>
+
+        <h1
+          style={{
+            fontSize: "78px",
+            fontWeight: "900",
             marginBottom: "20px",
           }}
         >
-          Why Train <br />
-          <span style={{ color: "#d4af37" }}>
-            With Marc?
-          </span>
+          Marc Harris Golf
+        </h1>
+
+        <h2
+          style={{
+            fontSize: "34px",
+            color: "#22c55e",
+            marginBottom: "30px",
+          }}
+        >
+          Online Golf Coaching Worldwide
+        </h2>
+
+        <div
+          style={{
+            display: "flex",
+            gap: "20px",
+            justifyContent: "center",
+            alignItems: "center",
+            marginBottom: "35px",
+            flexWrap: "wrap",
+          }}
+        >
+          <img
+            src="https://flagcdn.com/w320/gb.png"
+            alt="British Flag"
+            style={{
+              width: "90px",
+              borderRadius: "12px",
+            }}
+          />
+
+          <img
+            src="https://flagcdn.com/w320/za.png"
+            alt="South African Flag"
+            style={{
+              width: "90px",
+              borderRadius: "12px",
+            }}
+          />
+        </div>
+
+        <p
+          style={{
+            maxWidth: "900px",
+            fontSize: "24px",
+            lineHeight: "1.8",
+            color: "#d1d5db",
+            marginBottom: "25px",
+          }}
+        >
+          22+ years playing experience • Certified GSA Level 1
+          Coach • Coaching beginners to elite golfers.
+        </p>
+
+        <p
+          style={{
+            maxWidth: "900px",
+            fontSize: "22px",
+            lineHeight: "1.8",
+            color: "#9ca3af",
+            marginBottom: "55px",
+          }}
+        >
+          Live video calls, swing analysis, direct feedback,
+          lesson planning, and personal coaching online.
+        </p>
+      </section>
+
+      {/* WHY CHOOSE MARC */}
+      <section
+        style={{
+          padding: "140px 20px",
+          backgroundColor: "#000",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "68px",
+            marginBottom: "35px",
+          }}
+        >
+          Why Train With Marc Harris?
         </h2>
 
         <p
           style={{
             textAlign: "center",
-            color: "#aaa",
-            fontSize: "22px",
-            marginBottom: "60px",
+            maxWidth: "1000px",
+            margin: "0 auto 80px auto",
+            fontSize: "24px",
+            lineHeight: "1.9",
+            color: "#d1d5db",
           }}
         >
-          World-class coaching. Personal attention. Real improvement.
+          Personalized coaching built around your individual
+          swing — not generic lessons copied from the internet.
         </p>
 
-        {/* Cards */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: "25px",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "30px",
+            maxWidth: "1400px",
+            margin: "0 auto",
           }}
         >
-
           {[
-            {
-              title: "Personalized Coaching",
-              text: "Every golfer is different. Marc builds coaching around your unique swing and movement patterns.",
-            },
-            {
-              title: "Professional Swing Analysis",
-              text: "Detailed feedback on mechanics, posture, sequencing, contact, and consistency.",
-            },
-            {
-              title: "Real Improvement",
-              text: "Improve confidence, cleaner strikes, better distance control, and consistency.",
-            },
-            {
-              title: "Worldwide Online Coaching",
-              text: "Train from anywhere in the world with direct communication and support.",
-            },
+            "Personalized coaching",
+            "Direct video support",
+            "Beginner to elite coaching",
+            "Professional swing analysis",
+            "Simple explanations",
+            "Long-term improvement plans",
           ].map((item, index) => (
             <div
               key={index}
               style={{
-                backgroundColor: "#111",
-                border: "1px solid #222",
-                borderRadius: "24px",
+                backgroundColor: "#101010",
                 padding: "35px",
+                borderRadius: "24px",
+                textAlign: "center",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "22px",
+                  lineHeight: "1.8",
+                  color: "#d1d5db",
+                  fontWeight: "bold",
+                }}
+              >
+                {item}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* LEVELS */}
+      <section
+        style={{
+          padding: "140px 20px",
+          backgroundColor: "#050505",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "68px",
+            marginBottom: "35px",
+          }}
+        >
+          Coaching For Every Golfer
+        </h2>
+
+        <p
+          style={{
+            textAlign: "center",
+            maxWidth: "900px",
+            margin: "0 auto 80px auto",
+            fontSize: "22px",
+            lineHeight: "1.8",
+            color: "#d1d5db",
+          }}
+        >
+          Simple online coaching through video calls and swing
+          analysis.
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: "35px",
+            maxWidth: "1500px",
+            margin: "0 auto",
+          }}
+        >
+          {[
+            {
+              title: "Beginners",
+              text: "Grip, posture, setup, and confidence from day one.",
+            },
+            {
+              title: "Improving Golfers",
+              text: "Better consistency, timing, and cleaner ball striking.",
+            },
+            {
+              title: "Elite Players",
+              text: "Advanced mechanics, sequencing, and performance coaching.",
+            },
+          ].map((level, index) => (
+            <div
+              key={index}
+              style={{
+                backgroundColor: "#101010",
+                padding: "40px",
+                borderRadius: "28px",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "36px",
+                  color: "#22c55e",
+                  marginBottom: "20px",
+                }}
+              >
+                {level.title}
+              </h3>
+
+              <p
+                style={{
+                  fontSize: "20px",
+                  lineHeight: "1.8",
+                  color: "#d1d5db",
+                }}
+              >
+                {level.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section
+        style={{
+          padding: "150px 20px",
+          background:
+            "linear-gradient(180deg, #07130b 0%, #000000 100%)",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "72px",
+            marginBottom: "70px",
+          }}
+        >
+          Coach In Action
+        </h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "35px",
+            maxWidth: "1500px",
+            margin: "0 auto",
+          }}
+        >
+          {galleryImages.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt="Golf"
+              style={{
+                width: "100%",
+                height: "430px",
+                objectFit: "cover",
+                borderRadius: "25px",
+                boxShadow:
+                  "0 20px 50px rgba(0,0,0,0.5)",
+              }}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* REVIEWS */}
+      <section
+        style={{
+          padding: "150px 20px",
+          backgroundColor: "#050505",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "72px",
+            marginBottom: "80px",
+          }}
+        >
+          Client Reviews
+        </h2>
+
+        <div
+          style={{
+            maxWidth: "1400px",
+            margin: "0 auto",
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: "35px",
+          }}
+        >
+          {reviews.map((review, index) => (
+            <div
+              key={index}
+              style={{
+                backgroundColor: "#101010",
+                padding: "40px",
+                borderRadius: "28px",
               }}
             >
               <h3
                 style={{
                   fontSize: "28px",
                   marginBottom: "20px",
-                  color: "#d4af37",
+                  color: "#22c55e",
                 }}
               >
-                {item.title}
+                {review.name}
               </h3>
 
               <p
                 style={{
-                  color: "#ccc",
-                  lineHeight: "1.8",
-                  fontSize: "18px",
+                  fontSize: "21px",
+                  lineHeight: "1.9",
+                  color: "#d1d5db",
                 }}
               >
-                {item.text}
+                {review.text}
               </p>
             </div>
           ))}
-
         </div>
-
       </section>
 
-      {/* GOLFERS I HELP */}
+      {/* PACKAGES */}
       <section
         style={{
-          padding: "100px 20px",
-          backgroundColor: "#050505",
+          padding: "150px 20px",
+          backgroundColor: "#000",
         }}
       >
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "72px",
+            marginBottom: "80px",
+          }}
+        >
+          Coaching Packages
+        </h2>
 
         <div
           style={{
-            maxWidth: "1200px",
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: "35px",
+            maxWidth: "1500px",
             margin: "0 auto",
           }}
         >
-
-          <h2
-            style={{
-              fontSize: "60px",
-              textAlign: "center",
-              marginBottom: "20px",
-            }}
-          >
-            Golfers I Help
-          </h2>
-
-          <p
-            style={{
-              textAlign: "center",
-              color: "#d4af37",
-              fontSize: "22px",
-              marginBottom: "60px",
-            }}
-          >
-            What You Can Improve At Your Level
-          </p>
-
-          <div
-            style={{
-              display: "grid",
-              gap: "30px",
-            }}
-          >
-
-            {/* BEGINNERS */}
+          {[
+            {
+              title: "Swing Analysis",
+              price: "$60",
+              text: "Detailed online swing breakdown and feedback.",
+            },
+            {
+              title: "Single Online Lesson",
+              price: "$80",
+              text: "30-minute live online coaching session.",
+            },
+            {
+              title: "10 Session Package",
+              price: "$700",
+              text: "Long-term coaching and development plan.",
+            },
+            {
+              title: "Monthly Coaching",
+              price: "$500",
+              text: "Monthly support, video calls, and swing analysis.",
+            },
+          ].map((pkg, index) => (
             <div
+              key={index}
               style={{
-                backgroundColor: "#111",
+                backgroundColor: "#101010",
+                padding: "45px",
                 borderRadius: "28px",
-                padding: "40px",
+                textAlign: "center",
               }}
             >
               <h3
                 style={{
-                  fontSize: "40px",
-                  color: "#39d353",
-                  marginBottom: "25px",
+                  fontSize: "38px",
+                  color: "#22c55e",
+                  marginBottom: "20px",
                 }}
               >
-                Beginners
+                {pkg.title}
               </h3>
 
-              <ul
+              <p
                 style={{
-                  lineHeight: "2",
-                  color: "#ddd",
-                  fontSize: "22px",
+                  fontSize: "56px",
+                  fontWeight: "bold",
+                  marginBottom: "20px",
                 }}
               >
-                <li>Grip, posture & setup</li>
-                <li>Swing fundamentals</li>
-                <li>Ball striking & contact</li>
-                <li>Confidence on the course</li>
-                <li>Understanding the game</li>
-              </ul>
+                {pkg.price}
+              </p>
+
+              <p
+                style={{
+                  fontSize: "20px",
+                  lineHeight: "1.8",
+                  color: "#d1d5db",
+                  marginBottom: "30px",
+                }}
+              >
+                {pkg.text}
+              </p>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "14px",
+                }}
+              >
+                <a
+                  href="https://wa.me/84776326949"
+                  style={{
+                    backgroundColor: "#22c55e",
+                    color: "#fff",
+                    padding: "14px",
+                    borderRadius: "14px",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  }}
+                >
+                  WhatsApp
+                </a>
+
+                <a
+                  href="https://zalo.me/0816059110"
+                  style={{
+                    border: "2px solid #22c55e",
+                    color: "#fff",
+                    padding: "14px",
+                    borderRadius: "14px",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Zalo
+                </a>
+
+                <a
+                  href="https://facebook.com/"
+                  style={{
+                    border: "2px solid #22c55e",
+                    color: "#fff",
+                    padding: "14px",
+                    borderRadius: "14px",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Facebook
+                </a>
+
+                <a
+                  href="https://instagram.com/"
+                  style={{
+                    border: "2px solid #22c55e",
+                    color: "#fff",
+                    padding: "14px",
+                    borderRadius: "14px",
+                    textDecoration: "none",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Instagram
+                </a>
+              </div>
             </div>
-
-            {/* IMPROVING */}
-            <div
-              style={{
-                backgroundColor: "#111",
-                borderRadius: "28px",
-                padding: "40px",
-              }}
-            >
-              <h3
-                style={{
-                  fontSize: "40px",
-                  color: "#39d353",
-                  marginBottom: "25px",
-                }}
-              >
-                Improving Golfers
-              </h3>
-
-              <ul
-                style={{
-                  lineHeight: "2",
-                  color: "#ddd",
-                  fontSize: "22px",
-                }}
-              >
-                <li>Cleaner ball striking</li>
-                <li>Consistency & control</li>
-                <li>Shot shaping</li>
-                <li>Short game & putting</li>
-                <li>Course management</li>
-              </ul>
-            </div>
-
-            {/* ELITE */}
-            <div
-              style={{
-                backgroundColor: "#111",
-                borderRadius: "28px",
-                padding: "40px",
-              }}
-            >
-              <h3
-                style={{
-                  fontSize: "40px",
-                  color: "#d4af37",
-                  marginBottom: "25px",
-                }}
-              >
-                Elite Players
-              </h3>
-
-              <ul
-                style={{
-                  lineHeight: "2",
-                  color: "#ddd",
-                  fontSize: "22px",
-                }}
-              >
-                <li>Advanced mechanics</li>
-                <li>Shot sequencing</li>
-                <li>Performance under pressure</li>
-                <li>Distance optimization</li>
-                <li>Tournament strategy</li>
-              </ul>
-            </div>
-
-          </div>
-
+          ))}
         </div>
-
       </section>
-
     </main>
   );
 }
