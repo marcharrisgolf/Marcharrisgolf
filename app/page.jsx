@@ -8,23 +8,23 @@ export default function Home() {
         fontFamily: "Arial, sans-serif",
       }}
     >
+
       {/* HERO SECTION */}
       <section
         style={{
           position: "relative",
-          height: "100vh",
+          minHeight: "100vh",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          textAlign: "center",
-          padding: "20px",
           overflow: "hidden",
         }}
       >
-        {/* Background */}
+
+        {/* Background Image */}
         <img
           src="/golf-hero.jpg"
-          alt="Golf"
+          alt="Golf Hero"
           style={{
             position: "absolute",
             width: "100%",
@@ -39,7 +39,7 @@ export default function Home() {
           style={{
             position: "absolute",
             inset: 0,
-            backgroundColor: "rgba(0,0,0,0.5)",
+            backgroundColor: "rgba(0,0,0,0.55)",
           }}
         ></div>
 
@@ -49,187 +49,313 @@ export default function Home() {
           alt="MH Golf"
           style={{
             position: "absolute",
-            top: "20px",
-            right: "20px",
-            width: "90px",
+            top: 20,
+            left: 20,
+            width: 90,
             zIndex: 10,
           }}
         />
 
-        {/* Hero Content */}
+        {/* Hero Text */}
         <div
           style={{
             position: "relative",
             zIndex: 5,
-            maxWidth: "900px",
+            maxWidth: "700px",
+            padding: "20px",
           }}
         >
+
           <h1
             style={{
-              fontSize: "60px",
+              fontSize: "64px",
               fontWeight: "bold",
-              marginBottom: "30px",
+              lineHeight: "1.1",
+              marginBottom: "25px",
             }}
           >
-            Elevate Your Golf Journey
+            Elevate Your <br />
+            <span style={{ color: "#d4af37" }}>
+              Golf Journey
+            </span>
           </h1>
 
           <p
             style={{
               fontSize: "24px",
               lineHeight: "1.7",
-              color: "#d1d5db",
+              color: "#ddd",
               marginBottom: "40px",
             }}
           >
             Premium online golf coaching with Marc Harris.
             Improve your swing, confidence, consistency,
-            ball striking, and overall understanding
-            of the game through personalised international coaching.
+            ball striking, and overall understanding of the game
+            through personalised international coaching.
           </p>
 
           <a
             href="https://wa.me/84776326949"
             style={{
-              backgroundColor: "white",
+              display: "inline-block",
+              backgroundColor: "#d4af37",
               color: "black",
-              padding: "18px 36px",
+              padding: "18px 34px",
               borderRadius: "14px",
               fontWeight: "bold",
               textDecoration: "none",
-              display: "inline-block",
+              fontSize: "18px",
             }}
           >
             Contact Marc On WhatsApp
           </a>
+
         </div>
       </section>
 
-      {/* WHY TRAIN */}
+      {/* WHY TRAIN WITH MARC */}
       <section
         style={{
-          padding: "80px 20px",
+          padding: "100px 20px",
           maxWidth: "1200px",
           margin: "0 auto",
         }}
       >
+
         <h2
           style={{
-            fontSize: "64px",
-            marginBottom: "60px",
-            fontWeight: "bold",
+            fontSize: "60px",
+            textAlign: "center",
+            marginBottom: "20px",
           }}
         >
-          Why Train With Marc?
+          Why Train <br />
+          <span style={{ color: "#d4af37" }}>
+            With Marc?
+          </span>
         </h2>
 
+        <p
+          style={{
+            textAlign: "center",
+            color: "#aaa",
+            fontSize: "22px",
+            marginBottom: "60px",
+          }}
+        >
+          World-class coaching. Personal attention. Real improvement.
+        </p>
+
+        {/* Cards */}
         <div
           style={{
             display: "grid",
-            gap: "30px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+            gap: "25px",
           }}
         >
-          <div
-            style={{
-              backgroundColor: "#111",
-              padding: "40px",
-              borderRadius: "24px",
-            }}
-          >
-            <h3 style={{ fontSize: "36px", marginBottom: "20px" }}>
-              Personalized Coaching
-            </h3>
 
-            <p style={{ fontSize: "22px", color: "#d1d5db" }}>
-              Every golfer has a unique swing. Marc focuses on helping you
-              improve based on your natural movement patterns rather than
-              forcing unrealistic positions.
-            </p>
-          </div>
-
-          <div
-            style={{
-              backgroundColor: "#111",
-              padding: "40px",
-              borderRadius: "24px",
-            }}
-          >
-            <h3 style={{ fontSize: "36px", marginBottom: "20px" }}>
-              Professional Swing Analysis
-            </h3>
-
-            <p style={{ fontSize: "22px", color: "#d1d5db" }}>
-              Receive detailed feedback on mechanics, sequencing,
-              posture, club path, contact, and consistency
-              to unlock real improvement.
-            </p>
-          </div>
-
-          <div
-            style={{
-              backgroundColor: "#111",
-              padding: "40px",
-              borderRadius: "24px",
-            }}
-          >
-            <h3 style={{ fontSize: "36px", marginBottom: "20px" }}>
-              Golfers Marc Helps
-            </h3>
-
-            <p
+          {[
+            {
+              title: "Personalized Coaching",
+              text: "Every golfer is different. Marc builds coaching around your unique swing and movement patterns.",
+            },
+            {
+              title: "Professional Swing Analysis",
+              text: "Detailed feedback on mechanics, posture, sequencing, contact, and consistency.",
+            },
+            {
+              title: "Real Improvement",
+              text: "Improve confidence, cleaner strikes, better distance control, and consistency.",
+            },
+            {
+              title: "Worldwide Online Coaching",
+              text: "Train from anywhere in the world with direct communication and support.",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
               style={{
-                fontSize: "28px",
-                color: "#22c55e",
-                marginBottom: "10px",
-                fontWeight: "bold",
+                backgroundColor: "#111",
+                border: "1px solid #222",
+                borderRadius: "24px",
+                padding: "35px",
               }}
             >
-              Beginners
-            </p>
+              <h3
+                style={{
+                  fontSize: "28px",
+                  marginBottom: "20px",
+                  color: "#d4af37",
+                }}
+              >
+                {item.title}
+              </h3>
 
-            <p style={{ fontSize: "22px", color: "#d1d5db" }}>
-              Grip, setup, posture, confidence, contact, and understanding
-              the fundamentals of the game.
-            </p>
+              <p
+                style={{
+                  color: "#ccc",
+                  lineHeight: "1.8",
+                  fontSize: "18px",
+                }}
+              >
+                {item.text}
+              </p>
+            </div>
+          ))}
 
-            <br />
-
-            <p
-              style={{
-                fontSize: "28px",
-                color: "#22c55e",
-                marginBottom: "10px",
-                fontWeight: "bold",
-              }}
-            >
-              Improving Golfers
-            </p>
-
-            <p style={{ fontSize: "22px", color: "#d1d5db" }}>
-              Cleaner ball striking, consistency, shot shaping,
-              distance control, and lower scores.
-            </p>
-
-            <br />
-
-            <p
-              style={{
-                fontSize: "28px",
-                color: "#22c55e",
-                marginBottom: "10px",
-                fontWeight: "bold",
-              }}
-            >
-              Elite Players
-            </p>
-
-            <p style={{ fontSize: "22px", color: "#d1d5db" }}>
-              Advanced mechanics, sequencing, performance training,
-              tournament preparation, and scoring optimisation.
-            </p>
-          </div>
         </div>
+
       </section>
+
+      {/* GOLFERS I HELP */}
+      <section
+        style={{
+          padding: "100px 20px",
+          backgroundColor: "#050505",
+        }}
+      >
+
+        <div
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+          }}
+        >
+
+          <h2
+            style={{
+              fontSize: "60px",
+              textAlign: "center",
+              marginBottom: "20px",
+            }}
+          >
+            Golfers I Help
+          </h2>
+
+          <p
+            style={{
+              textAlign: "center",
+              color: "#d4af37",
+              fontSize: "22px",
+              marginBottom: "60px",
+            }}
+          >
+            What You Can Improve At Your Level
+          </p>
+
+          <div
+            style={{
+              display: "grid",
+              gap: "30px",
+            }}
+          >
+
+            {/* BEGINNERS */}
+            <div
+              style={{
+                backgroundColor: "#111",
+                borderRadius: "28px",
+                padding: "40px",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "40px",
+                  color: "#39d353",
+                  marginBottom: "25px",
+                }}
+              >
+                Beginners
+              </h3>
+
+              <ul
+                style={{
+                  lineHeight: "2",
+                  color: "#ddd",
+                  fontSize: "22px",
+                }}
+              >
+                <li>Grip, posture & setup</li>
+                <li>Swing fundamentals</li>
+                <li>Ball striking & contact</li>
+                <li>Confidence on the course</li>
+                <li>Understanding the game</li>
+              </ul>
+            </div>
+
+            {/* IMPROVING */}
+            <div
+              style={{
+                backgroundColor: "#111",
+                borderRadius: "28px",
+                padding: "40px",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "40px",
+                  color: "#39d353",
+                  marginBottom: "25px",
+                }}
+              >
+                Improving Golfers
+              </h3>
+
+              <ul
+                style={{
+                  lineHeight: "2",
+                  color: "#ddd",
+                  fontSize: "22px",
+                }}
+              >
+                <li>Cleaner ball striking</li>
+                <li>Consistency & control</li>
+                <li>Shot shaping</li>
+                <li>Short game & putting</li>
+                <li>Course management</li>
+              </ul>
+            </div>
+
+            {/* ELITE */}
+            <div
+              style={{
+                backgroundColor: "#111",
+                borderRadius: "28px",
+                padding: "40px",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "40px",
+                  color: "#d4af37",
+                  marginBottom: "25px",
+                }}
+              >
+                Elite Players
+              </h3>
+
+              <ul
+                style={{
+                  lineHeight: "2",
+                  color: "#ddd",
+                  fontSize: "22px",
+                }}
+              >
+                <li>Advanced mechanics</li>
+                <li>Shot sequencing</li>
+                <li>Performance under pressure</li>
+                <li>Distance optimization</li>
+                <li>Tournament strategy</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
     </main>
   );
 }
