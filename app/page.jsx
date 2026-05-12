@@ -22,6 +22,27 @@ export default function Home() {
         },
         "google_translate_element"
       );
+
+      setTimeout(() => {
+        const gadget = document.querySelector(".goog-te-gadget");
+        if (gadget) {
+          gadget.style.color = "transparent";
+          gadget.style.fontSize = "0px";
+        }
+
+        const select = document.querySelector(".goog-te-combo");
+        if (select) {
+          select.style.background = "#111";
+          select.style.color = "#fff";
+          select.style.border = "2px solid #22c55e";
+          select.style.borderRadius = "10px";
+          select.style.padding = "8px 12px";
+          select.style.fontSize = "14px";
+          select.style.fontFamily = "Arial, sans-serif";
+          select.style.outline = "none";
+          select.style.cursor = "pointer";
+        }
+      }, 1000);
     };
   }, []);
 
@@ -63,7 +84,6 @@ export default function Home() {
         fontFamily: "Arial, sans-serif",
       }}
     >
-
       {/* TRANSLATE BUTTON */}
       <div
         style={{
@@ -72,19 +92,22 @@ export default function Home() {
           right: "20px",
           zIndex: "9999",
           backgroundColor: "#111",
-          padding: "10px 14px",
-          borderRadius: "14px",
+          padding: "14px",
+          borderRadius: "16px",
           border: "2px solid #22c55e",
           boxShadow: "0 10px 30px rgba(0,0,0,0.4)",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "8px",
         }}
       >
         <div
           style={{
             color: "#fff",
             fontWeight: "bold",
-            marginBottom: "6px",
-            fontSize: "14px",
-            textAlign: "center",
+            fontSize: "15px",
+            fontFamily: "Arial, sans-serif",
           }}
         >
           Translate
