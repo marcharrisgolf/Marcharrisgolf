@@ -1,51 +1,4 @@
-"use client";
-
-import { useEffect } from "react";
-
 export default function Home() {
-  useEffect(() => {
-    const addScript = document.createElement("script");
-    addScript.src =
-      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-    addScript.async = true;
-    document.body.appendChild(addScript);
-
-    window.googleTranslateElementInit = () => {
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: "en",
-          autoDisplay: false,
-          includedLanguages:
-            "af,sq,am,ar,hy,az,eu,be,bn,bs,bg,ca,ceb,ny,zh-CN,zh-TW,co,hr,cs,da,nl,en,eo,et,tl,fi,fr,fy,gl,ka,de,el,gu,ht,ha,haw,he,hi,hmn,hu,is,ig,id,ga,it,ja,jw,kn,kk,km,rw,ko,ku,ky,lo,la,lv,lt,lb,mk,mg,ms,ml,mt,mi,mr,mn,my,ne,no,or,ps,fa,pl,pt,pa,ro,ru,sm,gd,sr,st,sn,sd,si,sk,sl,so,es,su,sw,sv,tg,ta,tt,te,th,tr,tk,uk,ur,ug,uz,vi,cy,xh,yi,yo,zu",
-          layout:
-            window.google.translate.TranslateElement.InlineLayout.SIMPLE,
-        },
-        "google_translate_element"
-      );
-
-      setTimeout(() => {
-        const gadget = document.querySelector(".goog-te-gadget");
-        if (gadget) {
-          gadget.style.color = "transparent";
-          gadget.style.fontSize = "0px";
-        }
-
-        const select = document.querySelector(".goog-te-combo");
-        if (select) {
-          select.style.background = "#111";
-          select.style.color = "#fff";
-          select.style.border = "2px solid #22c55e";
-          select.style.borderRadius = "10px";
-          select.style.padding = "8px 12px";
-          select.style.fontSize = "14px";
-          select.style.fontFamily = "Arial, sans-serif";
-          select.style.outline = "none";
-          select.style.cursor = "pointer";
-        }
-      }, 1000);
-    };
-  }, []);
-
   const reviews = [
     {
       name: "James R.",
@@ -53,27 +6,21 @@ export default function Home() {
     },
     {
       name: "Daniel K.",
-      text: "Professional, patient, and incredibly knowledgeable. Excellent coaching.",
+      text: "Professional, patient, and incredibly knowledgeable.",
     },
     {
       name: "Sarah L.",
       text: "Easy to understand and very effective coaching sessions.",
     },
-    {
-      name: "Michael T.",
-      text: "My ball striking improved massively after working with Marc.",
-    },
   ];
 
   const galleryImages = [
-    "/IMG_7364.png",
     "/IMG_7362.png",
     "/IMG_7359.png",
     "/IMG_7360.png",
     "/IMG_7358.png",
     "/IMG_7357.png",
     "/IMG_7361.png",
-    "/IMG_7356.png",
   ];
 
   return (
@@ -84,38 +31,6 @@ export default function Home() {
         fontFamily: "Arial, sans-serif",
       }}
     >
-      {/* TRANSLATE BUTTON */}
-      <div
-        style={{
-          position: "fixed",
-          top: "20px",
-          right: "20px",
-          zIndex: "9999",
-          backgroundColor: "#111",
-          padding: "14px",
-          borderRadius: "16px",
-          border: "2px solid #22c55e",
-          boxShadow: "0 10px 30px rgba(0,0,0,0.4)",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "8px",
-        }}
-      >
-        <div
-          style={{
-            color: "#fff",
-            fontWeight: "bold",
-            fontSize: "15px",
-            fontFamily: "Arial, sans-serif",
-          }}
-        >
-          Translate
-        </div>
-
-        <div id="google_translate_element"></div>
-      </div>
-
       {/* HERO */}
       <section
         style={{
@@ -130,22 +45,31 @@ export default function Home() {
             "linear-gradient(180deg, #000000 0%, #07130b 100%)",
         }}
       >
-        <img
-          src="/IMG_7364.png"
-          alt="Marc Harris Golf"
+        {/* MAIN IMAGE */}
+        <div
           style={{
+            position: "relative",
             width: "520px",
             maxWidth: "95%",
-            height: "650px",
-            objectFit: "cover",
-            borderRadius: "28px",
-            border: "4px solid #22c55e",
             marginBottom: "50px",
-            boxShadow:
-              "0 25px 80px rgba(34,197,94,0.35)",
           }}
-        />
+        >
+          <img
+            src="/IMG_7364.png"
+            alt="Marc Harris Golf"
+            style={{
+              width: "100%",
+              height: "650px",
+              objectFit: "cover",
+              borderRadius: "28px",
+              border: "4px solid #22c55e",
+              boxShadow:
+                "0 25px 80px rgba(34,197,94,0.35)",
+            }}
+          />
+        </div>
 
+        {/* FREE CALL */}
         <div
           style={{
             backgroundColor: "#22c55e",
@@ -160,6 +84,7 @@ export default function Home() {
           FREE 10-Minute Online Video Call
         </div>
 
+        {/* START BUTTON */}
         <a
           href="https://wa.me/84776326949"
           style={{
@@ -186,7 +111,7 @@ export default function Home() {
             marginBottom: "20px",
           }}
         >
-          Marc Harris Golf
+          MH GOLF
         </h1>
 
         <h2
@@ -199,6 +124,7 @@ export default function Home() {
           Online Golf Coaching Worldwide
         </h2>
 
+        {/* FLAGS */}
         <div
           style={{
             display: "flex",
@@ -238,7 +164,7 @@ export default function Home() {
           }}
         >
           22+ years playing experience • Certified GSA Level 1
-          Coach • Coaching beginners to elite golfers.
+          Coach • Beginner to elite golfers.
         </p>
 
         <p
@@ -251,8 +177,186 @@ export default function Home() {
           }}
         >
           Live video calls, swing analysis, direct feedback,
-          lesson planning, and personal coaching online.
+          and personalized online coaching.
         </p>
+      </section>
+
+      {/* WHY TRAIN WITH ME */}
+      <section
+        style={{
+          padding: "140px 20px",
+          backgroundColor: "#000",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "68px",
+            marginBottom: "35px",
+          }}
+        >
+          Why Train With Me?
+        </h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "30px",
+            maxWidth: "1400px",
+            margin: "80px auto 0 auto",
+          }}
+        >
+          {[
+            "Personalized coaching",
+            "Professional swing analysis",
+            "Beginner to elite coaching",
+            "Simple explanations",
+            "Direct video support",
+            "Long-term improvement",
+          ].map((item, index) => (
+            <div
+              key={index}
+              style={{
+                backgroundColor: "#101010",
+                padding: "35px",
+                borderRadius: "24px",
+                textAlign: "center",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "22px",
+                  lineHeight: "1.8",
+                  color: "#d1d5db",
+                  fontWeight: "bold",
+                }}
+              >
+                {item}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* LEVELS */}
+      <section
+        style={{
+          padding: "140px 20px",
+          backgroundColor: "#050505",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "68px",
+            marginBottom: "35px",
+          }}
+        >
+          Coaching For Every Golfer
+        </h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(320px, 1fr))",
+            gap: "35px",
+            maxWidth: "1500px",
+            margin: "80px auto 0 auto",
+          }}
+        >
+          {[
+            {
+              title: "Beginners",
+              text: "Grip, posture, setup, and confidence.",
+            },
+            {
+              title: "Improving Golfers",
+              text: "Better consistency and cleaner strikes.",
+            },
+            {
+              title: "Elite Players",
+              text: "Advanced mechanics and sequencing.",
+            },
+          ].map((level, index) => (
+            <div
+              key={index}
+              style={{
+                backgroundColor: "#101010",
+                padding: "40px",
+                borderRadius: "28px",
+              }}
+            >
+              <h3
+                style={{
+                  fontSize: "36px",
+                  color: "#22c55e",
+                  marginBottom: "20px",
+                }}
+              >
+                {level.title}
+              </h3>
+
+              <p
+                style={{
+                  fontSize: "20px",
+                  lineHeight: "1.8",
+                  color: "#d1d5db",
+                }}
+              >
+                {level.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section
+        style={{
+          padding: "150px 20px",
+          background:
+            "linear-gradient(180deg, #07130b 0%, #000000 100%)",
+        }}
+      >
+        <h2
+          style={{
+            textAlign: "center",
+            fontSize: "72px",
+            marginBottom: "70px",
+          }}
+        >
+          Coach In Action
+        </h2>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit, minmax(300px, 1fr))",
+            gap: "35px",
+            maxWidth: "1500px",
+            margin: "0 auto",
+          }}
+        >
+          {galleryImages.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt="Golf"
+              style={{
+                width: "100%",
+                height: "430px",
+                objectFit: "cover",
+                borderRadius: "25px",
+                boxShadow:
+                  "0 20px 50px rgba(0,0,0,0.5)",
+              }}
+            />
+          ))}
+        </div>
       </section>
     </main>
   );
