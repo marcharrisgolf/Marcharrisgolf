@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect } from "react";
 
 export default function Home() {
@@ -77,6 +78,18 @@ export default function Home() {
           boxShadow: "0 10px 30px rgba(0,0,0,0.4)",
         }}
       >
+        <div
+          style={{
+            color: "#fff",
+            fontWeight: "bold",
+            marginBottom: "6px",
+            fontSize: "14px",
+            textAlign: "center",
+          }}
+        >
+          Translate
+        </div>
+
         <div id="google_translate_element"></div>
       </div>
 
