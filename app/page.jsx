@@ -3,7 +3,7 @@ export default function Home() {
     <main className="bg-black text-white min-h-screen">
 
       {/* HERO SECTION */}
-      <section className="relative h-screen flex items-center justify-center">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
 
         {/* Background Image */}
         <img
@@ -13,9 +13,9 @@ export default function Home() {
         />
 
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        {/* Logo */}
+        {/* Logo Top Right */}
         <div className="absolute top-6 right-6 z-20">
           <img
             src="/mh-logo.png"
@@ -25,57 +25,164 @@ export default function Home() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 text-center px-6 max-w-4xl">
+        <div className="relative z-10 text-center px-6 max-w-5xl">
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
             Elevate Your Golf Journey
           </h1>
 
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Premium international golf coaching with Marc Harris.
+          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-10">
+            Premium online golf coaching with Marc Harris.
             Improve your swing, confidence, consistency,
-            and understanding of the game through professional
-            online coaching designed for golfers worldwide.
+            ball striking, and overall understanding of the game
+            through personalised international coaching.
           </p>
 
           <a
             href="https://wa.me/84776326949"
-            className="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:bg-gray-200 transition"
+            className="bg-white text-black px-8 py-4 rounded-2xl text-lg font-semibold hover:bg-gray-200 transition"
           >
             Contact Marc On WhatsApp
           </a>
 
         </div>
+
       </section>
 
-      {/* ABOUT */}
+      {/* WHY TRAIN WITH MARC */}
       <section className="py-24 px-6 md:px-20">
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <h2 className="text-5xl md:text-7xl font-bold mb-16 leading-tight">
+          Why Train <br /> With Marc?
+        </h2>
 
-          <img
-            src="/marc-coaching.jpg"
-            alt="Marc Harris"
-            className="rounded-3xl shadow-2xl"
-          />
+        <div className="grid md:grid-cols-2 gap-8">
 
-          <div>
+          {/* Card 1 */}
+          <div className="bg-zinc-950 rounded-[40px] p-12 border border-zinc-900">
 
-            <h2 className="text-5xl font-bold mb-8">
-              Meet Marc Harris
-            </h2>
+            <h3 className="text-4xl font-bold mb-6 text-green-400">
+              Personalized Coaching
+            </h3>
 
-            <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              With over 22 years of golfing experience and professional
-              coaching certification, Marc Harris delivers premium golf
-              instruction focused on real improvement and long-term confidence.
+            <p className="text-gray-300 text-2xl leading-relaxed">
+              Every golfer has a unique swing.
+              Marc focuses on helping you improve
+              based on your natural movement patterns
+              rather than forcing unrealistic positions.
             </p>
 
-            <p className="text-gray-300 text-lg leading-relaxed">
-              Whether you are a beginner or an experienced golfer,
-              MH Golf provides a modern coaching experience designed
-              to help players unlock their true potential.
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-zinc-950 rounded-[40px] p-12 border border-zinc-900">
+
+            <h3 className="text-4xl font-bold mb-6 text-green-400">
+              Professional Swing Analysis
+            </h3>
+
+            <p className="text-gray-300 text-2xl leading-relaxed">
+              Receive detailed feedback on your mechanics,
+              sequencing, posture, club path, contact,
+              and consistency to help unlock real progress.
             </p>
+
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-zinc-950 rounded-[40px] p-12 border border-zinc-900">
+
+            <h3 className="text-4xl font-bold mb-6 text-green-400">
+              Real Improvement
+            </h3>
+
+            <p className="text-gray-300 text-2xl leading-relaxed">
+              Improve confidence, cleaner strikes,
+              distance control, consistency,
+              and overall understanding of your swing.
+            </p>
+
+          </div>
+
+          {/* Card 4 */}
+          <div className="bg-zinc-950 rounded-[40px] p-12 border border-zinc-900">
+
+            <h3 className="text-4xl font-bold mb-6 text-green-400">
+              Worldwide Online Coaching
+            </h3>
+
+            <p className="text-gray-300 text-2xl leading-relaxed">
+              Train from anywhere in the world with
+              premium online coaching and direct
+              support from Marc Harris.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* GOLFER LEVELS */}
+      <section className="py-24 px-6 md:px-20">
+
+        <h2 className="text-5xl md:text-7xl font-bold mb-16">
+          Coaching For Every Level
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
+
+          {/* Beginner */}
+          <div className="bg-zinc-950 rounded-[40px] p-12 min-h-[420px]">
+
+            <h3 className="text-5xl font-bold mb-10 text-green-400">
+              Beginners
+            </h3>
+
+            <ul className="space-y-6 text-gray-300 text-2xl leading-relaxed">
+              <li>• Grip and posture</li>
+              <li>• Setup fundamentals</li>
+              <li>• Swing confidence</li>
+              <li>• Ball contact</li>
+              <li>• Basic swing mechanics</li>
+              <li>• Understanding the game</li>
+            </ul>
+
+          </div>
+
+          {/* Improving Golfers */}
+          <div className="bg-zinc-950 rounded-[40px] p-12 min-h-[420px]">
+
+            <h3 className="text-5xl font-bold mb-10 text-green-400">
+              Improving Golfers
+            </h3>
+
+            <ul className="space-y-6 text-gray-300 text-2xl leading-relaxed">
+              <li>• Cleaner ball striking</li>
+              <li>• Better consistency</li>
+              <li>• Club path improvement</li>
+              <li>• Sequencing and timing</li>
+              <li>• Shot shaping</li>
+              <li>• Distance control</li>
+            </ul>
+
+          </div>
+
+          {/* Elite Players */}
+          <div className="bg-zinc-950 rounded-[40px] p-12 min-h-[420px]">
+
+            <h3 className="text-5xl font-bold mb-10 text-green-400">
+              Elite Players
+            </h3>
+
+            <ul className="space-y-6 text-gray-300 text-2xl leading-relaxed">
+              <li>• Advanced mechanics</li>
+              <li>• Efficient sequencing</li>
+              <li>• Pressure performance</li>
+              <li>• Tournament preparation</li>
+              <li>• Precision shot control</li>
+              <li>• High-level swing refinement</li>
+            </ul>
 
           </div>
 
