@@ -923,7 +923,7 @@
     formData.forEach((value, key) => { payload[key] = value; });
 
     try{
-      const res = await fetch('https://formsubmit.co/ajax/matthewjefferies18@gmail.com', {
+      const res = await fetch('https://formsubmit.co/ajax/harrismarc529@gmail.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(payload)
@@ -937,7 +937,7 @@
         throw new Error('Request failed');
       }
     } catch(err){
-      statusEl.textContent = 'Something went wrong sending that. Please try WhatsApp or email matthewjefferies18@gmail.com directly.';
+      statusEl.textContent = 'Something went wrong sending that. Please try WhatsApp or email harrismarc529@gmail.com directly.';
       statusEl.classList.add('error');
     } finally {
       submitBtn.disabled = false;
