@@ -973,15 +973,18 @@
           submitBtn.textContent = 'Send enquiry';
         }
       });
-    </script>
 
-    <script src="https://jsdelivr.net" defer></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        Fancybox.bind("[data-fancybox]", {
-          // Optional: Add custom animations or infinity looping if desired
-        });
-      });
-    </script>
+       <script src="https://jsdelivr.net" defer></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    Fancybox.bind("[data-fancybox]", {
+      // Completely stops background preloading for maximum speed optimization
+      Carousel: {
+        preload: 0
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
