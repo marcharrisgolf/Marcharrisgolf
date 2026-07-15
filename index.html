@@ -49,9 +49,6 @@
     <img src="https://flagcdn.com/w320/za.png" alt="South African flag" width="20">
   </div>
   <a class="cta-mini" href="https://wa.me/84776326949" target="_blank" rel="noopener">Free 10-min call</a>
-  <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileDrawer">
-    <span></span><span></span><span></span>
-  </button>
 </div>
 
 <div class="tabnav-wrap">
@@ -68,34 +65,6 @@
     </span>
   </nav>
 </div>
-
-<!-- Mobile navigation drawer: a dedicated mobile nav pattern, not a squeezed version of the desktop tabs -->
-<div class="drawer-backdrop" id="drawerBackdrop"></div>
-<nav class="mobile-drawer" id="mobileDrawer" aria-label="Site sections" aria-hidden="true">
-  <div class="drawer-head">
-    <div class="mark">Marc Harris <span>Golf</span></div>
-    <button type="button" class="drawer-close" id="drawerClose" aria-label="Close menu">
-      <svg viewBox="0 0 24 24"><use href="#icon-close"/></svg>
-    </button>
-  </div>
-  <ul class="drawer-list">
-    <li><button type="button" class="drawer-item active" data-tab="home"><svg class="drawer-icon"><use href="#icon-flag-mini"/></svg>Home</button></li>
-    <li><button type="button" class="drawer-item" data-tab="about"><svg class="drawer-icon"><use href="#icon-flag-mini"/></svg>About</button></li>
-    <li><button type="button" class="drawer-item" data-tab="coaching"><svg class="drawer-icon"><use href="#icon-flag-mini"/></svg>Coaching</button></li>
-    <li><button type="button" class="drawer-item" data-tab="gallery"><svg class="drawer-icon"><use href="#icon-flag-mini"/></svg>Gallery</button></li>
-    <li><button type="button" class="drawer-item" data-tab="reviews"><svg class="drawer-icon"><use href="#icon-flag-mini"/></svg>Reviews</button></li>
-    <li><button type="button" class="drawer-item" data-tab="pricing"><svg class="drawer-icon"><use href="#icon-flag-mini"/></svg>Pricing</button></li>
-    <li><button type="button" class="drawer-item" data-tab="contact"><svg class="drawer-icon"><use href="#icon-flag-mini"/></svg>Contact</button></li>
-  </ul>
-  <div class="drawer-foot">
-    <a class="btn-primary" href="https://wa.me/84776326949" target="_blank" rel="noopener">Book your free 10-min call</a>
-    <div class="flags" style="margin-top:16px;">
-      <img src="https://flagcdn.com/w320/gb.png" alt="British flag" width="18">
-      <img src="https://flagcdn.com/w320/za.png" alt="South African flag" width="18">
-      <span class="flags-note">Coached across two continents</span>
-    </div>
-  </div>
-</nav>
 
 <main>
 
@@ -390,7 +359,6 @@
 
 <script>
   const tabs = document.querySelectorAll('.tab-btn');
-  const drawerItems = document.querySelectorAll('.drawer-item');
   const panels = document.querySelectorAll('.panel');
   const indicator = document.getElementById('tabIndicator');
   const nav = document.getElementById('tabnav');
@@ -402,31 +370,17 @@
     indicator.style.width = btnRect.width + 'px';
   }
 
-  function activate(tabName){
-    tabs.forEach(t => {
-      const isMatch = t.dataset.tab === tabName;
-      t.classList.toggle('active', isMatch);
-      t.setAttribute('aria-selected', isMatch ? 'true' : 'false');
-    });
-    drawerItems.forEach(d => d.classList.toggle('active', d.dataset.tab === tabName));
+  function activate(tabName, btn){
+    tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
     panels.forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected','true');
     document.getElementById(tabName).classList.add('active');
-
-    const activeDesktopTab = document.querySelector(`.tab-btn[data-tab="${tabName}"]`);
-    if(activeDesktopTab) positionIndicator(activeDesktopTab);
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    positionIndicator(btn);
   }
 
   tabs.forEach(btn => {
-    btn.addEventListener('click', () => activate(btn.dataset.tab));
-  });
-
-  drawerItems.forEach(btn => {
-    btn.addEventListener('click', () => {
-      activate(btn.dataset.tab);
-      closeDrawer();
-    });
+    btn.addEventListener('click', () => activate(btn.dataset.tab, btn));
   });
 
   window.addEventListener('resize', () => {
@@ -437,38 +391,6 @@
   window.addEventListener('load', () => {
     const activeBtn = document.querySelector('.tab-btn.active');
     if(activeBtn) positionIndicator(activeBtn);
-  });
-
-  // ---------- Mobile navigation drawer ----------
-  const hamburgerBtn = document.getElementById('hamburgerBtn');
-  const mobileDrawer = document.getElementById('mobileDrawer');
-  const drawerBackdrop = document.getElementById('drawerBackdrop');
-  const drawerClose = document.getElementById('drawerClose');
-
-  function openDrawer(){
-    mobileDrawer.classList.add('open');
-    drawerBackdrop.classList.add('open');
-    hamburgerBtn.setAttribute('aria-expanded', 'true');
-    mobileDrawer.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    drawerClose.focus();
-  }
-
-  function closeDrawer(){
-    mobileDrawer.classList.remove('open');
-    drawerBackdrop.classList.remove('open');
-    hamburgerBtn.setAttribute('aria-expanded', 'false');
-    mobileDrawer.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    hamburgerBtn.focus();
-  }
-
-  hamburgerBtn.addEventListener('click', openDrawer);
-  drawerClose.addEventListener('click', closeDrawer);
-  drawerBackdrop.addEventListener('click', closeDrawer);
-
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape' && mobileDrawer.classList.contains('open')) closeDrawer();
   });
 
   // ---------- Contact form: send via FormSubmit without leaving the page ----------
@@ -625,7 +547,15 @@
   toTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // If a tab is opened while scrolled down, jump back to the top of the panel
+  tabs.forEach(btn => {
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
 </script>
 
 </body>
 </html>
+
